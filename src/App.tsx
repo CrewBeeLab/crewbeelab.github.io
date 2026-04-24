@@ -13,6 +13,9 @@ import {
 } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
+const GITHUB_URL = 'https://github.com/CrewBeeLab/CrewBee';
+const GET_STARTED_URL = '#docs';
+
 const BeeIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
   <img
     src="/assets/images/crewbee-icon-nobg.png"
@@ -80,7 +83,7 @@ const Navbar = () => {
               {item}
             </a>
           ))}
-          <a href="https://github.com" className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-honey hover:text-honey-soft transition-colors">
+          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-honey hover:text-honey-soft transition-colors">
             GitHub ↗
           </a>
           <button 
@@ -128,7 +131,9 @@ const Navbar = () => {
                 </a>
               ))}
               <a 
-                href="https://github.com" 
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-xs font-bold uppercase tracking-widest text-honey"
               >
@@ -186,12 +191,12 @@ const HeroSection = () => (
         </div>
         
         <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4 sm:gap-6">
-          <button className="btn-primary text-center">
+          <a href={GET_STARTED_URL} className="btn-primary text-center">
             Get Started
-          </button>
-          <button className="btn-secondary flex items-center justify-center gap-2">
+          </a>
+          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="btn-secondary flex items-center justify-center gap-2">
             <Github className="w-4 h-4" /> View on GitHub
-          </button>
+          </a>
         </div>
       </motion.div>
 
@@ -427,7 +432,7 @@ const Footer = () => (
         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink/40">CrewBeeLab © 2026</span>
       </div>
       <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/40">
-        <a href="#" className="hover:text-honey transition-colors">GitHub</a>
+        <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="hover:text-honey transition-colors">GitHub</a>
         <a href="#" className="hover:text-honey transition-colors">Docs</a>
         <a href="#" className="hover:text-honey transition-colors">License</a>
       </div>
