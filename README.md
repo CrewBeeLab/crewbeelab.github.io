@@ -1,12 +1,6 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# CrewBee Website
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/34ae6a21-cf7d-48ef-ae76-7e0cefd5af89
+This contains everything you need to run the CrewBee website locally.
 
 ## Run Locally
 
@@ -14,8 +8,7 @@ View your app in AI Studio: https://ai.studio/apps/34ae6a21-cf7d-48ef-ae76-7e0ce
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in `.env.local` to your Gemini API key
-3. Start the development server on `http://localhost:3000` and open the browser automatically:
+2. Start the development server on `http://localhost:3000` and open the browser automatically:
    `npm run start`
 
 ## Available Scripts
@@ -26,3 +19,7 @@ View your app in AI Studio: https://ai.studio/apps/34ae6a21-cf7d-48ef-ae76-7e0ce
 - `npm run build:dev`: run `scripts/build-dev.mjs` to create a development-mode build in `dist/`
 - `npm run preview`: preview the built app on `http://localhost:4173` and open the browser automatically
 - `npm run lint`: run TypeScript diagnostics
+
+## Static Assets
+
+- Put logos, icons, Open Graph images, and other public image assets in `public/assets/images/`.

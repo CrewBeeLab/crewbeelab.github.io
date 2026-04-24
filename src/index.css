@@ -1,17 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+:root {
+  --theme-ink: #15120f;
+  --theme-honey: #d99b2b;
+  --theme-honey-soft: #e7b95a;
+  --theme-paper: #f7f2e8;
+  --theme-paper-warm: #f0e7d7;
+  --theme-mist: #d8d0c1;
+  --theme-surface: rgba(255, 255, 255, 0.4);
+  --theme-surface-hover: rgba(255, 255, 255, 0.6);
+  --theme-surface-border: rgba(21, 18, 15, 0.05); /* ink/5 */
+  --theme-grain-opacity: 0.025;
+  --theme-glow-opacity: 1;
+}
+
+.dark {
+  --theme-ink: #f2eee8;
+  --theme-honey: #f2aa2a;
+  --theme-honey-soft: #d99b2b;
+  --theme-paper: #0c0b0a;
+  --theme-paper-warm: #12100f;
+  --theme-mist: #1a1816;
+  --theme-surface: rgba(255, 255, 255, 0.03);
+  --theme-surface-hover: rgba(255, 255, 255, 0.06);
+  --theme-surface-border: rgba(242, 238, 232, 0.08); /* ink/8 equivalent */
+  --theme-grain-opacity: 0.035;
+  --theme-glow-opacity: 0.7;
+}
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
   
-  --color-ink: #15120f;
-  --color-ink-soft: rgba(21, 18, 15, 0.6);
-  --color-honey: #d99b2b;
-  --color-honey-soft: #e7b95a;
-  --color-paper: #f7f2e8;
-  --color-paper-warm: #f0e7d7;
-  --color-mist: #d8d0c1;
+  --color-ink: var(--theme-ink);
+  --color-honey: var(--theme-honey);
+  --color-honey-soft: var(--theme-honey-soft);
+  --color-paper: var(--theme-paper);
+  --color-paper-warm: var(--theme-paper-warm);
+  --color-mist: var(--theme-mist);
+  --color-surface: var(--theme-surface);
+  --color-surface-hover: var(--theme-surface-hover);
+  --color-surface-border: var(--theme-surface-border);
 
   --animate-marquee: marquee 30s linear infinite;
   
@@ -22,8 +52,11 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-paper text-ink font-sans selection:bg-honey/30 selection:text-ink antialiased;
+    @apply bg-paper text-ink font-sans selection:bg-honey/30 selection:text-ink antialiased transition-colors duration-500;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -37,15 +70,15 @@
   }
   
   .card-paper {
-    @apply bg-white/20 border border-ink/10 rounded-none transition-all duration-300;
+    @apply bg-surface border border-surface-border shadow-sm hover:shadow-md hover:bg-surface-hover transition-all duration-300;
   }
 
   .btn-primary {
-    @apply px-10 py-5 bg-ink text-paper font-sans font-bold text-[11px] uppercase tracking-[0.2em] rounded-none hover:bg-ink/90 transition-all duration-300;
+    @apply px-8 py-4 bg-ink text-paper font-sans font-bold text-[11px] uppercase tracking-[0.2em] shadow-lg shadow-ink/10 hover:shadow-xl hover:-translate-y-0.5 hover:bg-ink/90 transition-all duration-300;
   }
 
   .btn-secondary {
-    @apply px-10 py-5 border border-ink/20 text-ink font-sans font-bold text-[11px] uppercase tracking-[0.2em] rounded-none hover:bg-ink/5 transition-all duration-300;
+    @apply px-8 py-4 bg-surface border border-surface-border text-ink font-sans font-bold text-[11px] uppercase tracking-[0.2em] shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:bg-surface-hover transition-all duration-300;
   }
 
   .editorial-border {
@@ -58,8 +91,9 @@
   position: fixed;
   inset: 0;
   z-index: -1;
-  opacity: 0.025;
+  opacity: var(--theme-grain-opacity);
   pointer-events: none;
-  background-image: radial-gradient(circle at 1px 1px, rgba(21, 18, 15, 0.22) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(217, 155, 43, 0.55) 1px, transparent 0);
   background-size: 18px 18px;
+  transition: opacity 500ms ease;
 }
