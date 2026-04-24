@@ -1,5 +1,11 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { 
+  Github,
+  Terminal,
+  Layers,
+  ArrowRight,
+  Code2,
+  CheckCircle2,
   Menu,
   X,
   Moon,
@@ -7,10 +13,12 @@ import {
 } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
-const CREWBEE_ICON_SRC = '/assets/images/crewbee-icon.png';
-
-const CrewBeeIcon = ({ className = "w-6 h-6", alt = "CrewBee" }: { className?: string; alt?: string }) => (
-  <img src={CREWBEE_ICON_SRC} alt={alt} className={`object-cover rounded-full ${className}`} />
+const BeeIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <img
+    src="/crewbee-icon-nobg.png"
+    alt="CrewBee"
+    className={`${className} object-contain transition-all duration-500 hover:scale-105 drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(217,155,43,0.2)]`}
+  />
 );
 
 const useDarkMode = () => {
@@ -58,7 +66,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-paper/90 backdrop-blur-md border-b border-ink/5 py-4' : 'bg-transparent py-8'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4 group cursor-pointer">
-          <CrewBeeIcon className="w-8 h-8" />
+          <BeeIcon className="w-8 h-8 text-ink" />
           <span className="text-[14px] font-sans font-bold tracking-[0.2em] uppercase mt-1">CrewBee</span>
         </div>
 
@@ -163,9 +171,9 @@ const HeroSection = () => (
         </p>
         
         <div className="space-y-4 mb-12 font-sans text-sm tracking-wide opacity-80">
-          <div className="flex items-center gap-3"><CrewBeeIcon className="w-5 h-5" alt="" /> Not a prompt pack.</div>
-          <div className="flex items-center gap-3"><CrewBeeIcon className="w-5 h-5" alt="" /> Not a flat agent list.</div>
-          <div className="flex items-center gap-3"><CrewBeeIcon className="w-5 h-5" alt="" /> Not another giant runtime.</div>
+          <div className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-honey" /> Not a prompt pack.</div>
+          <div className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-honey" /> Not a flat agent list.</div>
+          <div className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-honey" /> Not another giant runtime.</div>
         </div>
         
         <div className="flex flex-wrap items-center gap-6">
@@ -173,7 +181,7 @@ const HeroSection = () => (
             Get Started
           </button>
           <button className="btn-secondary flex items-center gap-2">
-            <CrewBeeIcon className="w-4 h-4" alt="" /> View on GitHub
+            <Github className="w-4 h-4" /> View on GitHub
           </button>
         </div>
       </motion.div>
@@ -186,7 +194,7 @@ const HeroSection = () => (
       >
         <div className="relative w-full aspect-square max-w-md flex items-center justify-center">
           <div className="absolute inset-0 bg-honey/10 blur-[80px] rounded-full" />
-          <CrewBeeIcon className="w-48 h-48 md:w-56 md:h-56 relative z-20 shadow-2xl shadow-honey/10" />
+          <BeeIcon className="w-48 h-48 md:w-56 md:h-56 text-ink relative z-20" />
           
           {/* Floating Nodes */}
           <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 4, repeat: Infinity }} className="absolute top-10 left-0 bg-paper/80 backdrop-blur-md border border-ink/10 p-3 shadow-xl z-30">
@@ -278,13 +286,13 @@ const HowItWorks = () => (
       <div className="hidden md:block absolute top-[48px] left-[15%] right-[15%] h-px bg-ink/10" />
       <div className="grid md:grid-cols-3 gap-12 relative z-10">
         {[
-          { step: "Define", desc: "Write Team and Agent files." },
-          { step: "Project", desc: "CrewBee turns them into host-ready agents." },
-          { step: "Run", desc: "Use them in OpenCode with Leader-first delegation." }
+          { step: "Define", desc: "Write Team and Agent files.", icon: <Code2 className="w-6 h-6" /> },
+          { step: "Project", desc: "CrewBee turns them into host-ready agents.", icon: <Layers className="w-6 h-6" /> },
+          { step: "Run", desc: "Use them in OpenCode with Leader-first delegation.", icon: <Terminal className="w-6 h-6" /> }
         ].map((item, i) => (
           <div key={i} className="flex flex-col items-center text-center">
             <div className="w-24 h-24 bg-paper card-paper flex items-center justify-center text-honey rounded-full mb-8 shadow-sm">
-              <CrewBeeIcon className="w-12 h-12" alt="" />
+              {item.icon}
             </div>
             <h4 className="text-3xl font-serif italic mb-4 text-ink">{item.step}</h4>
             <p className="text-ink/60 font-serif text-lg">{item.desc}</p>
@@ -369,10 +377,10 @@ const OpenCodeReady = () => (
     </p>
     <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
       <button className="text-ink font-bold uppercase tracking-[0.2em] text-[11px] flex items-center gap-2 hover:text-honey transition-colors group">
-        Read installation guide <CrewBeeIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" alt="" />
+        Read installation guide <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
       </button>
       <button className="text-ink font-bold uppercase tracking-[0.2em] text-[11px] flex items-center gap-2 hover:text-honey transition-colors group">
-        View OpenCode runtime docs <CrewBeeIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" alt="" />
+        View OpenCode runtime docs <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
       </button>
     </div>
   </section>
@@ -406,7 +414,7 @@ const Footer = () => (
   <footer className="bg-paper py-20 px-6 border-t border-ink/5">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
       <div className="flex items-center gap-4">
-        <CrewBeeIcon className="w-6 h-6 opacity-60" />
+        <BeeIcon className="w-6 h-6 text-ink/40" />
         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink/40">CrewBeeLab © 2026</span>
       </div>
       <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/40">
