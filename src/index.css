@@ -55,6 +55,11 @@
   html {
     scroll-behavior: smooth;
   }
+
+  html[lang="zh-CN"] .italic {
+    font-style: normal;
+  }
+
   body {
     @apply bg-paper text-ink font-sans selection:bg-honey/30 selection:text-ink antialiased transition-colors duration-500;
   }
