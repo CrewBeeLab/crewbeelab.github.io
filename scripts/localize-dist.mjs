@@ -25,7 +25,7 @@ const locales = {
 
 const alternateLinks = `    <link rel="alternate" hreflang="en" href="${locales.en.url}" />
     <link rel="alternate" hreflang="zh-CN" href="${locales.zh.url}" />
-    <link rel="alternate" hreflang="x-default" href="${locales.en.url}" />`;
+    <link rel="alternate" hreflang="x-default" href="${locales.zh.url}" />`;
 
 const upsertTag = (html, selectorPattern, tag) => {
   if (selectorPattern.test(html)) {

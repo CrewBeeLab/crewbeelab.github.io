@@ -47,7 +47,7 @@ const getInitialLanguage = (): Language => {
     return storedLanguage;
   }
 
-  return navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+  return 'zh';
 };
 
 const upsertMeta = (selector: string, attributes: Record<string, string>) => {
@@ -750,7 +750,7 @@ export default function App() {
     upsertCanonical(localizedUrl);
     upsertLink('en', getLocalizedUrl('en'), languageConfig.en.alternateLabel);
     upsertLink('zh-CN', getLocalizedUrl('zh'), languageConfig.zh.alternateLabel);
-    upsertLink('x-default', getLocalizedUrl('en'));
+    upsertLink('x-default', getLocalizedUrl('zh'));
   }, [language, t.siteDescription, t.siteTitle]);
 
   return (
