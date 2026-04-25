@@ -24,6 +24,6 @@ export const useLocalizedHead = (language: Language, t: Copy) => {
     upsertCanonical(localizedUrl);
     upsertLink('en', getLocalizedUrl('en'), languageConfig.en.alternateLabel);
     upsertLink('zh-CN', getLocalizedUrl('zh'), languageConfig.zh.alternateLabel);
-    upsertLink('x-default', getLocalizedUrl('zh'));
+    upsertLink('x-default', getLocalizedUrl('en'));
   }, [language, t.siteDescription, t.siteTitle]);
 };

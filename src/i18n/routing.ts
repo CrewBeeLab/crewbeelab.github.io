@@ -25,5 +25,5 @@ export const getInitialLanguage = (): Language => {
     return storedLanguage;
   }
 
-  return 'zh';
+  return 'en';
 };

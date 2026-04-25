@@ -27,7 +27,7 @@ const locales = {
 
 const alternateLinks = `    <link rel="alternate" hreflang="en" href="${locales.en.url}" />
     <link rel="alternate" hreflang="zh-CN" href="${locales.zh.url}" />
-    <link rel="alternate" hreflang="x-default" href="${locales.zh.url}" />`;
+    <link rel="alternate" hreflang="x-default" href="${locales.en.url}" />`;
 
 const upsertTag = (html, selectorPattern, tag) => {
   if (selectorPattern.test(html)) {
@@ -60,7 +60,7 @@ if (!fs.existsSync(indexPath)) {
 }
 
 const baseHtml = fs.readFileSync(indexPath, 'utf8');
-fs.writeFileSync(indexPath, localizeHtml(baseHtml, locales.zh));
+fs.writeFileSync(indexPath, localizeHtml(baseHtml, locales.en));
 fs.mkdirSync(enDir, { recursive: true });
 fs.writeFileSync(enIndexPath, localizeHtml(baseHtml, locales.en));
 fs.mkdirSync(zhDir, { recursive: true });
