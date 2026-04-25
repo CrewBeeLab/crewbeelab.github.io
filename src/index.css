@@ -56,8 +56,9 @@
     scroll-behavior: smooth;
   }
 
-  html[lang="zh-CN"] .italic {
-    font-style: normal;
+  html[lang="zh-CN"],
+  html[lang="zh-CN"] * {
+    font-style: normal !important;
   }
 
   body {
