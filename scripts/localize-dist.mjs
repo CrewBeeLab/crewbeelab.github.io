@@ -3,6 +3,8 @@ import path from 'node:path';
 
 const distDir = path.resolve('dist');
 const indexPath = path.join(distDir, 'index.html');
+const enDir = path.join(distDir, 'en');
+const enIndexPath = path.join(enDir, 'index.html');
 const zhDir = path.join(distDir, 'zh');
 const zhIndexPath = path.join(zhDir, 'index.html');
 
@@ -12,7 +14,7 @@ const locales = {
     title: 'CrewBee | Team-first Agent Teams',
     description: 'CrewBee is a Team-first Agent Team framework for OpenCode. Define Teams, pick a Leader, and run structured agent workflows in the host you already use.',
     ogLocale: 'en_US',
-    url: 'https://crewbeelab.github.io/'
+    url: 'https://crewbeelab.github.io/en/'
   },
   zh: {
     lang: 'zh-CN',
@@ -58,8 +60,10 @@ if (!fs.existsSync(indexPath)) {
 }
 
 const baseHtml = fs.readFileSync(indexPath, 'utf8');
-fs.writeFileSync(indexPath, localizeHtml(baseHtml, locales.en));
+fs.writeFileSync(indexPath, localizeHtml(baseHtml, locales.zh));
+fs.mkdirSync(enDir, { recursive: true });
+fs.writeFileSync(enIndexPath, localizeHtml(baseHtml, locales.en));
 fs.mkdirSync(zhDir, { recursive: true });
 fs.writeFileSync(zhIndexPath, localizeHtml(baseHtml, locales.zh));
 
-console.log('Localized dist pages: / and /zh/');
+console.log('Localized dist pages: /, /en/, and /zh/');

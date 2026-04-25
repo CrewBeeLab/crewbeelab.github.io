@@ -1,0 +1,9 @@
+export { Faq } from './Faq';
+export { HeroSection } from './HeroSection';
+export { HowItWorks } from './HowItWorks';
+export { OpenCodeReady } from './OpenCodeReady';
+export { SocialProof } from './SocialProof';
+export { StatusBar } from './StatusBar';
+export { TeamFirstModel } from './TeamFirstModel';
+export { WhatYouCanDo } from './WhatYouCanDo';
+export { WhyItExists } from './WhyItExists';
