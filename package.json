@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "start": "node scripts/dev.mjs",
-    "build": "vite build",
+    "build": "vite build && node scripts/localize-dist.mjs",
     "build:dev": "node scripts/build-dev.mjs",
     "preview": "vite preview --host localhost --port 4173 --open",
     "clean": "node -e \"const fs=require('fs'); fs.rmSync('dist',{recursive:true,force:true});\"",
