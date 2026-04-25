@@ -30,8 +30,10 @@ export default function App() {
       <Navbar t={t} onToggleLanguage={toggleLanguage} />
 
       <main>
-        <HeroSection t={t} />
-        <StatusBar t={t} />
+        <div className="min-h-dvh flex flex-col">
+          <HeroSection t={t} />
+          <StatusBar t={t} />
+        </div>
         <WhatYouCanDo t={t} />
         <WhyItExists t={t} />
         <HowItWorks t={t} />
