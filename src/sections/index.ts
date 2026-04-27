@@ -1,3 +1,4 @@
+export { Acknowledgements } from './Acknowledgements';
 export { Faq } from './Faq';
 export { HeroSection } from './HeroSection';
 export { HowItWorks } from './HowItWorks';

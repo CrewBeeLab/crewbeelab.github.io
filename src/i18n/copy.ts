@@ -25,6 +25,7 @@ export const copy = {
     builders: { title: 'For the Builders', subtitle: 'Built for people who already maintain agent workflows by hand.', cards: [{ role: 'OpenCode power users', desc: 'Want to run complex delegation workflows natively.' }, { role: 'Prompt pack maintainers', desc: 'Need a way to version and share structured behavior sets.' }, { role: 'Agent workflow builders', desc: 'Need transparent rules, not black-box agents.' }, { role: 'Developers everywhere', desc: 'Want reusable Team structures written as code.' }] },
     opencode: { title: 'Built for OpenCode first.', description: 'CrewBee currently provides a working MVP path for OpenCode: projected agents, config patching, session binding, delegation tooling, and user-level install.', links: ['Read installation guide', 'View OpenCode runtime docs'] },
     faq: { badge: 'FAQ', heading: ['Clarity', 'Through', 'Structure.'], items: [{ q: 'Is CrewBee a prompt pack?', a: 'No. CrewBee utilizes prompt definitions, but its core primitive is the Engineering Team: leader, members, shared policy, and projection logic.' }, { q: 'Why Leader-first architecture?', a: 'Because serious engineering requires legible entry points, rigorous context ownership, and a singular point of failure recovery.' }, { q: 'Which hosts are supported?', a: 'The current reference MVP is built specifically for OpenCode. However, the Protocol layer is host-agnostic and exportable.' }] },
+    acknowledgements: { badge: 'Acknowledgements', title: 'Inspired by the open-source agent ecosystem.', paragraphs: ['CrewBee is inspired by OpenCode and community projects such as oh-my-openagent. These projects helped make agent-team workflows visible and practical in real development environments.', 'CrewBee continues this direction by turning Agent Teams into manageable, host-adaptable, and reusable engineering assets.'] },
     footer: { docs: 'Docs', license: 'License' }
   },
   zh: {
@@ -40,6 +41,7 @@ export const copy = {
     builders: { title: '为构建者而生', subtitle: '面向那些已经手动维护智能体工作流的人。', cards: [{ role: 'OpenCode 重度用户', desc: '希望原生运行复杂的委派工作流。' }, { role: '提示词包维护者', desc: '需要一种方式来版本化和共享结构化行为集合。' }, { role: '智能体工作流构建者', desc: '需要透明的规则，而不是黑盒智能体。' }, { role: '所有开发者', desc: '希望用代码编写可复用的团队结构。' }] },
     opencode: { title: '优先为 OpenCode 构建。', description: 'CrewBee 当前为 OpenCode 提供了一条可用的 MVP 路径：投射智能体、修补配置、绑定会话、委派工具链以及用户级安装。', links: ['阅读安装指南', '查看 OpenCode 运行时文档'] },
     faq: { badge: '常见问题', heading: ['清晰性', '来自', '结构。'], items: [{ q: 'CrewBee 是提示词包吗？', a: '不是。CrewBee 会使用提示词定义，但它的核心原语是工程团队：Leader、成员、共享策略和投射逻辑。' }, { q: '为什么采用 Leader 优先架构？', a: '因为严肃工程需要清晰入口、严格的上下文 ownership，以及单一的失败恢复责任点。' }, { q: '支持哪些宿主？', a: '当前参考 MVP 专为 OpenCode 构建。不过 Protocol 层与宿主无关，可以导出到其他环境。' }] },
+    acknowledgements: { badge: '致谢', title: '受开源 Agent 生态启发。', paragraphs: ['CrewBee 受 OpenCode 以及 oh-my-openagent 等社区项目启发。这些项目让 Agent Team 工作流在真实开发环境中的价值变得更加清晰。', 'CrewBee 在这个方向上继续推进：把 Agent Team 进一步整理为可管理、可投影、可配置、可复用的工程资产。'] },
     footer: { docs: '文档', license: '许可证' }
   }
 } as const;

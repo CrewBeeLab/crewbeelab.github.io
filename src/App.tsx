@@ -4,6 +4,7 @@ import { useLocalizedHead } from './hooks/useLocalizedHead';
 import { Footer } from './layout/Footer';
 import { Navbar } from './layout/Navbar';
 import {
+  Acknowledgements,
   Faq,
   HeroSection,
   HowItWorks,
@@ -41,6 +42,7 @@ export default function App() {
         <SocialProof t={t} />
         <OpenCodeReady t={t} />
         <Faq t={t} />
+        <Acknowledgements t={t} />
       </main>
 
       <Footer t={t} />
