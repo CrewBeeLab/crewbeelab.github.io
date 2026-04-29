@@ -3,8 +3,8 @@ import { BeeIcon } from '../components/BeeIcon';
 import type { HomepageContent } from '../i18n/homepageContent';
 
 export const Footer = ({ content }: { content: HomepageContent }) => (
-  <footer className="bg-paper py-16 md:py-20 px-6 border-t border-ink/5">
-    <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
+  <footer className="bg-paper py-14 md:py-16 px-6 border-t border-ink/5">
+    <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
       <div className="flex flex-col md:flex-row items-center gap-4">
         <BeeIcon className="w-8 h-8 md:w-6 md:h-6 text-ink/40" />
         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink/40">CrewBeeLab © 2026</span>
