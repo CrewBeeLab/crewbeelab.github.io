@@ -1,4 +1,4 @@
-export const copy = {
+export const homepageContent = {
   en: {
     siteTitle: 'CrewBee | Agent Teams for OpenCode',
     siteDescription: 'CrewBee is an Agent Team framework for OpenCode that lets you design different Agent Teams for different tasks or projects, and switch flexibly between single-agent execution and multi-agent collaboration based on task complexity.',
@@ -61,4 +61,4 @@ export const copy = {
   }
 } as const;
 
-export type Copy = typeof copy.en;
+export type HomepageContent = typeof homepageContent.en;

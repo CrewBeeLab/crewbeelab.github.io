@@ -1,4 +1,4 @@
-import { copy } from './i18n/copy';
+import { homepageContent } from './i18n/homepageContent';
 import { useLanguage } from './hooks/useLanguage';
 import { useLocalizedHead } from './hooks/useLocalizedHead';
 import { Footer } from './layout/Footer';
@@ -9,20 +9,20 @@ import {
   Faq,
   HeroSection,
   HowItWorks,
-  OpenCodeReady,
-  ProjectContext,
-  SocialProof,
+  OpenCodeMvp,
+  ProjectContextRoadmap,
+  BuilderAudience,
   StatusBar,
-  TeamFirstModel,
-  WhatYouCanDo,
-  WhyItExists
+  TeamTemplates,
+  ProductHighlights,
+  ProductRationale
 } from './sections';
 
 export default function App() {
   const { language, toggleLanguage } = useLanguage();
-  const t = copy[language];
+  const content = homepageContent[language];
 
-  useLocalizedHead(language, t);
+  useLocalizedHead(language, content);
 
   return (
     <div className="relative font-sans text-ink selection:bg-honey/30">
@@ -30,26 +30,26 @@ export default function App() {
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,155,43,0.10),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.45),transparent_42%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(242,170,42,0.16),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_42%)] opacity-[var(--theme-glow-opacity)] transition-opacity duration-500 -z-10 pointer-events-none" />
       <div className="bg-grain" />
 
-      <Navbar t={t} onToggleLanguage={toggleLanguage} />
+      <Navbar content={content} onToggleLanguage={toggleLanguage} />
 
       <main>
         <div className="min-h-dvh flex flex-col">
-          <HeroSection t={t} />
-          <StatusBar t={t} />
+          <HeroSection content={content} />
+          <StatusBar content={content} />
         </div>
-        <WhatYouCanDo t={t} />
-        <WhyItExists t={t} />
-        <HowItWorks t={t} />
-        <CodingTeam t={t} />
-        <ProjectContext t={t} />
-        <TeamFirstModel t={t} />
-        <SocialProof t={t} />
-        <OpenCodeReady t={t} />
-        <Faq t={t} />
-        <Acknowledgements t={t} />
+        <ProductHighlights content={content} />
+        <ProductRationale content={content} />
+        <HowItWorks content={content} />
+        <CodingTeam content={content} />
+        <ProjectContextRoadmap content={content} />
+        <TeamTemplates content={content} />
+        <BuilderAudience content={content} />
+        <OpenCodeMvp content={content} />
+        <Faq content={content} />
+        <Acknowledgements content={content} />
       </main>
 
-      <Footer t={t} />
+      <Footer content={content} />
     </div>
   );
 }

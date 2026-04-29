@@ -5,9 +5,9 @@ import { GITHUB_URL, navItems } from '../config/site';
 import { BeeIcon } from '../components/BeeIcon';
 import { LanguageSwitch } from '../components/LanguageSwitch';
 import { useDarkMode } from '../hooks/useDarkMode';
-import type { Copy } from '../i18n/copy';
+import type { HomepageContent } from '../i18n/homepageContent';
 
-export const Navbar = ({ t, onToggleLanguage }: { t: Copy; onToggleLanguage: () => void }) => {
+export const Navbar = ({ content, onToggleLanguage }: { content: HomepageContent; onToggleLanguage: () => void }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { isDark, toggle } = useDarkMode();
@@ -34,25 +34,25 @@ export const Navbar = ({ t, onToggleLanguage }: { t: Copy; onToggleLanguage: () 
         <div className="hidden xl:flex flex-1 min-w-0 items-center justify-end gap-5 ml-8">
           {navItems.map((item) => (
             <a key={item.key} href={item.href} className="min-w-20 text-center whitespace-nowrap text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-ink/50 hover:text-ink transition-colors duration-200">
-              {t.nav[item.key]}
+              {content.nav[item.key]}
             </a>
           ))}
           <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="min-w-20 text-center whitespace-nowrap text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-honey hover:text-honey-soft transition-colors">
-            {t.nav.github}
+            {content.nav.github}
           </a>
-          <LanguageSwitch label={t.nav.switchLanguage} ariaLabel={t.nav.switchLanguageLabel} onClick={onToggleLanguage} />
-          <button onClick={toggle} className="p-2 rounded-full hover:bg-surface transition-colors text-ink/50 hover:text-ink" aria-label={t.nav.toggleTheme}>
+          <LanguageSwitch label={content.nav.switchLanguage} ariaLabel={content.nav.switchLanguageLabel} onClick={onToggleLanguage} />
+          <button onClick={toggle} className="p-2 rounded-full hover:bg-surface transition-colors text-ink/50 hover:text-ink" aria-label={content.nav.toggleTheme}>
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-          <button className="shrink-0 bg-ink text-paper px-6 py-3 border border-ink text-[10px] uppercase font-bold tracking-[0.2em] whitespace-nowrap hover:bg-paper hover:text-ink transition-all min-w-32">{t.nav.installCli}</button>
+          <button className="shrink-0 bg-ink text-paper px-6 py-3 border border-ink text-[10px] uppercase font-bold tracking-[0.2em] whitespace-nowrap hover:bg-paper hover:text-ink transition-all min-w-32">{content.nav.installCli}</button>
         </div>
 
         <div className="xl:hidden flex shrink-0 items-center gap-4">
-          <LanguageSwitch label={t.nav.switchLanguage} ariaLabel={t.nav.switchLanguageLabel} onClick={onToggleLanguage} />
-          <button onClick={toggle} className="p-2 rounded-full hover:bg-surface transition-colors text-ink/50 hover:text-ink" aria-label={t.nav.toggleTheme}>
+          <LanguageSwitch label={content.nav.switchLanguage} ariaLabel={content.nav.switchLanguageLabel} onClick={onToggleLanguage} />
+          <button onClick={toggle} className="p-2 rounded-full hover:bg-surface transition-colors text-ink/50 hover:text-ink" aria-label={content.nav.toggleTheme}>
             {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
-          <button aria-label={t.nav.toggleMenu} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button aria-label={content.nav.toggleMenu} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -64,17 +64,17 @@ export const Navbar = ({ t, onToggleLanguage }: { t: Copy; onToggleLanguage: () 
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <a key={item.key} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="text-xs font-bold uppercase tracking-widest text-ink hover:text-honey transition-colors">
-                  {t.nav[item.key]}
+                  {content.nav[item.key]}
                 </a>
               ))}
               <a href={GITHUB_URL} target="_blank" rel="noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="text-xs font-bold uppercase tracking-widest text-honey">
-                {t.nav.github}
+                {content.nav.github}
               </a>
               <button onClick={handleMobileLanguageToggle} className="text-xs font-bold uppercase tracking-widest text-ink hover:text-honey transition-colors text-left whitespace-nowrap">
-                {t.nav.switchLanguage}
+                {content.nav.switchLanguage}
               </button>
             </div>
-            <button className="bg-ink text-paper px-6 py-4 border border-ink text-xs uppercase font-bold tracking-[0.2em] hover:bg-paper hover:text-ink transition-all mt-4 w-full">{t.nav.installCli}</button>
+            <button className="bg-ink text-paper px-6 py-4 border border-ink text-xs uppercase font-bold tracking-[0.2em] hover:bg-paper hover:text-ink transition-all mt-4 w-full">{content.nav.installCli}</button>
           </motion.div>
         )}
       </AnimatePresence>
