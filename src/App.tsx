@@ -5,10 +5,12 @@ import { Footer } from './layout/Footer';
 import { Navbar } from './layout/Navbar';
 import {
   Acknowledgements,
+  CodingTeam,
   Faq,
   HeroSection,
   HowItWorks,
   OpenCodeReady,
+  ProjectContext,
   SocialProof,
   StatusBar,
   TeamFirstModel,
@@ -38,6 +40,8 @@ export default function App() {
         <WhatYouCanDo t={t} />
         <WhyItExists t={t} />
         <HowItWorks t={t} />
+        <CodingTeam t={t} />
+        <ProjectContext t={t} />
         <TeamFirstModel t={t} />
         <SocialProof t={t} />
         <OpenCodeReady t={t} />

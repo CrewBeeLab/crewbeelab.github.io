@@ -1,7 +1,7 @@
 import { SectionHeading } from '../components/SectionHeading';
-import type { Copy } from '../i18n/copy';
+import type { LocalizedSectionProps } from './types';
 
-export const SocialProof = ({ t }: { t: Copy }) => (
+export const SocialProof = ({ t }: LocalizedSectionProps) => (
   <section className="section-container bg-paper-warm/30 border-b border-ink/5">
     <SectionHeading subtitle={t.builders.subtitle} centered>{t.builders.title}</SectionHeading>
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mt-16">
@@ -11,7 +11,7 @@ export const SocialProof = ({ t }: { t: Copy }) => (
             <div className="w-1.5 h-1.5 rounded-full bg-honey" />
             <div className="text-[10px] font-bold text-ink tracking-[0.2em] uppercase">{item.role}</div>
           </div>
-          <p className="font-serif text-ink/70 italic text-lg leading-relaxed flex-grow">“{item.desc}”</p>
+          <p className="font-serif text-ink/70 italic text-base md:text-lg leading-relaxed flex-grow">“{item.desc}”</p>
         </div>
       ))}
     </div>

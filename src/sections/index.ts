@@ -1,8 +1,10 @@
 export { Acknowledgements } from './Acknowledgements';
+export { CodingTeam } from './CodingTeam';
 export { Faq } from './Faq';
 export { HeroSection } from './HeroSection';
 export { HowItWorks } from './HowItWorks';
 export { OpenCodeReady } from './OpenCodeReady';
+export { ProjectContext } from './ProjectContext';
 export { SocialProof } from './SocialProof';
 export { StatusBar } from './StatusBar';
 export { TeamFirstModel } from './TeamFirstModel';
