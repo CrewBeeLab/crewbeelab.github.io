@@ -12,7 +12,7 @@ export const designSystem = {
     badge: 'inline-block text-[10px] uppercase font-sans font-bold tracking-[0.2em] text-honey mb-4 md:mb-5',
     eyebrow: 'text-[10px] font-bold uppercase tracking-[0.22em] text-honey',
     index: 'text-[10px] font-bold text-honey block tracking-[0.2em] font-sans',
-    cardTitle: 'text-lg md:text-xl lg:text-[1.28rem] mb-3 italic font-serif leading-[1.22]',
+    cardTitle: 'text-lg md:text-xl lg:text-[1.28rem] mb-3 font-serif leading-[1.22]',
     cardText: 'text-ink/64 font-serif leading-[1.68] text-base md:text-[1.02rem]'
   },
   effect: {

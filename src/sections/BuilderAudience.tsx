@@ -11,7 +11,7 @@ export const BuilderAudience = ({ content }: LocalizedSectionProps) => (
             <div className="w-1.5 h-1.5 rounded-full bg-honey" />
             <div className="text-[10px] font-bold text-ink tracking-[0.2em] uppercase">{item.role}</div>
           </div>
-          <p className="font-serif text-ink/70 italic text-base md:text-[1.05rem] leading-[1.65] flex-grow">“{item.desc}”</p>
+          <p className="font-serif text-ink/70 text-base md:text-[1.05rem] leading-[1.65] flex-grow">“{item.desc}”</p>
         </div>
       ))}
     </div>

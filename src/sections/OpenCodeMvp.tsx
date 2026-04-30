@@ -3,7 +3,7 @@ import type { LocalizedSectionProps } from './types';
 
 export const OpenCodeMvp = ({ content }: LocalizedSectionProps) => (
   <section className="py-20 md:py-28 lg:py-36 max-w-6xl mx-auto px-6 text-center">
-    <h2 className="text-3xl md:text-5xl lg:text-[3.45rem] font-serif italic leading-[1.08] mb-5 md:mb-7">{content.opencode.title}</h2>
+    <h2 className="text-3xl md:text-5xl lg:text-[3.45rem] font-serif leading-[1.08] mb-5 md:mb-7">{content.opencode.title}</h2>
     <p className="text-lg md:text-[1.35rem] font-serif text-ink/70 leading-[1.68] mb-8 md:mb-10 max-w-4xl mx-auto">{content.opencode.description}</p>
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-9 md:mb-10 text-left">
       {content.opencode.proofs.map((proof) => (

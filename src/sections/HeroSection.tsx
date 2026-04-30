@@ -1,13 +1,14 @@
 import { motion } from 'motion/react';
 import { CheckCircle2, Github } from 'lucide-react';
+import { BeeIcon } from '../components/BeeIcon';
 import { DEMO_URL, GET_STARTED_URL, GITHUB_URL } from '../config/site';
 import type { LocalizedSectionProps } from './types';
 
 export const HeroSection = ({ content }: LocalizedSectionProps) => (
-  <section className="relative flex flex-1 items-center overflow-hidden w-full max-w-[1320px] mx-auto px-6 md:px-12 lg:px-16 pt-24 pb-10 md:pt-32 md:pb-10 lg:pt-28 lg:pb-8">
+  <section className="relative flex flex-1 items-center overflow-hidden w-full max-w-[1400px] mx-auto px-6 md:px-16 pt-24 pb-10 md:pt-32 md:pb-10 lg:pt-28 lg:pb-8">
     <div className="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] rounded-full opacity-[0.05] pointer-events-none" style={{ background: 'radial-gradient(circle, var(--theme-honey) 0%, transparent 70%)' }} />
 
-    <div className="grid md:grid-cols-12 gap-10 md:gap-12 lg:gap-14 items-center w-full">
+    <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-center w-full">
       <motion.div className="md:col-span-12 lg:col-span-7" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.35rem] xl:text-7xl mb-5 md:mb-6 font-serif tracking-tight leading-[1.08] md:leading-[1.04] max-w-4xl">
           {content.hero.titlePrefix} <span className="italic text-honey">{content.hero.titleHighlight}</span>
@@ -30,26 +31,10 @@ export const HeroSection = ({ content }: LocalizedSectionProps) => (
         </div>
       </motion.div>
 
-      <motion.div className="md:col-span-12 lg:col-span-5 relative flex items-center justify-center p-6 md:p-10 mb-8 md:mb-0" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
-        <div className="relative w-full max-w-[360px] sm:max-w-md lg:max-w-lg flex items-center justify-center">
+      <motion.div className="md:col-span-12 lg:col-span-5 relative flex items-center justify-center p-8 md:p-12 mb-10 md:mb-0" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
+        <div className="relative w-full aspect-square max-w-[280px] sm:max-w-md flex items-center justify-center">
           <div className="absolute inset-0 bg-honey/10 blur-[60px] md:blur-[80px] rounded-full" />
-          <div className="relative z-20 grid w-full gap-4 rounded-[2rem] border border-ink/10 bg-paper/80 p-5 shadow-2xl backdrop-blur-md">
-            <div className="grid grid-cols-[1fr_auto_1fr] items-start gap-3 text-left">
-              <div className="rounded-2xl border border-ink/8 bg-surface p-4">
-                <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-ink/45">Before</div>
-                <div className="space-y-2 font-mono text-xs text-ink/60">
-                  {content.hero.visualBefore.map((item) => <div key={item}>{item}</div>)}
-                </div>
-              </div>
-              <div className="pt-12 text-honey font-serif italic">→</div>
-              <div className="rounded-2xl border border-honey/20 bg-honey/8 p-4">
-                <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-honey">After / CodingTeam</div>
-                <div className="space-y-2 font-mono text-xs text-ink/72">
-                  {content.hero.visualAfter.map((item) => <div key={item}>{item}</div>)}
-                </div>
-              </div>
-            </div>
-          </div>
+          <BeeIcon className="w-40 h-40 md:w-56 md:h-56 text-ink relative z-20" />
           <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 4, repeat: Infinity }} className="absolute -top-4 sm:top-10 -left-4 sm:left-0 bg-paper/80 backdrop-blur-md border border-ink/10 p-2 sm:p-3 shadow-xl z-30 min-w-36 text-center">
             <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-[0.2em] whitespace-nowrap">{content.hero.floating[0]}</span>
           </motion.div>

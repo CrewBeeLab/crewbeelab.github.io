@@ -13,7 +13,7 @@ export const ProjectContextRoadmap = ({ content }: LocalizedSectionProps) => (
           <div className="grid gap-4 md:gap-5">
             {content.projectContext.cards.map((card) => (
               <div key={card.title} className={designSystem.surface.compactCard}>
-                <h3 className="mb-2.5 text-xl md:text-[1.38rem] font-serif italic text-ink leading-snug">{card.title}</h3>
+                <h3 className="mb-2.5 text-xl md:text-[1.38rem] font-serif text-ink leading-snug">{card.title}</h3>
                 <p className="font-serif text-base md:text-[1.05rem] leading-[1.65] text-ink/64">{card.desc}</p>
               </div>
             ))}

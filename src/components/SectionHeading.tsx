@@ -7,11 +7,11 @@ export const SectionHeading = ({ children, badge, subtitle, centered = false }: 
         {badge} //
       </span>
     )}
-    <h2 className="text-3xl md:text-5xl lg:text-[3.45rem] mb-4 md:mb-5 leading-[1.08] font-serif italic text-ink">
+    <h2 className="text-3xl md:text-5xl lg:text-[3.45rem] mb-4 md:mb-5 leading-[1.08] font-serif text-ink">
       {children}
     </h2>
     {subtitle && (
-      <p className={`text-base md:text-lg lg:text-[1.18rem] font-serif italic text-ink/64 max-w-3xl leading-[1.68] px-1 md:px-0 ${centered ? 'mx-auto' : 'mx-auto md:mx-0'}`}>
+      <p className={`text-base md:text-lg lg:text-[1.18rem] font-serif text-ink/64 max-w-3xl leading-[1.68] px-1 md:px-0 ${centered ? 'mx-auto' : 'mx-auto md:mx-0'}`}>
         {subtitle}
       </p>
     )}

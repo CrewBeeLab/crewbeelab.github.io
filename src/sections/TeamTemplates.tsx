@@ -7,7 +7,7 @@ export const TeamTemplates = ({ content }: LocalizedSectionProps) => (
     <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-14 lg:gap-20 items-center">
       <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
         <span className={designSystem.typography.badge}>{content.team.badge} //</span>
-        <h2 className="text-3xl md:text-5xl lg:text-[3.45rem] font-serif italic leading-[1.08] mb-5 md:mb-7 text-paper">{content.team.title}</h2>
+        <h2 className="text-3xl md:text-5xl lg:text-[3.45rem] font-serif leading-[1.08] mb-5 md:mb-7 text-paper">{content.team.title}</h2>
         <p className="text-lg md:text-[1.35rem] font-serif text-paper/70 leading-[1.68] mb-5 md:mb-7">{content.team.paragraphs[0]}</p>
         <p className="text-base md:text-lg font-serif text-paper/55 leading-[1.68]">{content.team.paragraphs[1]}</p>
       </motion.div>
