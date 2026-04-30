@@ -9,7 +9,7 @@ export const ProductHighlights = ({ content }: LocalizedSectionProps) => (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
       {content.features.cards.map((item, i) => (
         <Fragment key={item.title}>
-          <FeatureCard index={i} title={item.title} description={item.desc} tag={'tag' in item ? item.tag : undefined} className={i === 6 ? 'md:col-span-2 lg:col-span-3 lg:[&>p]:max-w-3xl' : 'min-h-[14rem]'} />
+          <FeatureCard index={i} title={item.title} description={item.desc} className="min-h-[14rem]" />
         </Fragment>
       ))}
     </div>

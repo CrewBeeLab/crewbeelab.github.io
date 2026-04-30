@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { CheckCircle2, Github } from 'lucide-react';
-import { GET_STARTED_URL, GITHUB_URL } from '../config/site';
-import { BeeIcon } from '../components/BeeIcon';
+import { DEMO_URL, GET_STARTED_URL, GITHUB_URL } from '../config/site';
 import type { LocalizedSectionProps } from './types';
 
 export const HeroSection = ({ content }: LocalizedSectionProps) => (
@@ -13,26 +12,44 @@ export const HeroSection = ({ content }: LocalizedSectionProps) => (
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.35rem] xl:text-7xl mb-5 md:mb-6 font-serif tracking-tight leading-[1.08] md:leading-[1.04] max-w-4xl">
           {content.hero.titlePrefix} <span className="italic text-honey">{content.hero.titleHighlight}</span>
         </h1>
-        <p className="text-lg sm:text-xl md:text-[1.35rem] opacity-70 mb-7 md:mb-8 max-w-2xl leading-[1.68] font-serif">{content.hero.description}</p>
+        <p className="text-lg sm:text-xl md:text-[1.35rem] opacity-70 mb-4 max-w-2xl leading-[1.68] font-serif">{content.hero.description}</p>
+        <p className="text-base md:text-lg opacity-65 mb-6 md:mb-7 max-w-2xl leading-[1.7] font-serif">{content.hero.supporting}</p>
 
         <div className="space-y-3 mb-9 md:mb-8 font-sans text-xs md:text-sm tracking-wide opacity-80 max-w-2xl">
-          {content.hero.bullets.map((item) => (
+          {content.hero.boundaries.map((item) => (
             <div key={item} className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-honey shrink-0" /> {item}</div>
           ))}
         </div>
 
         <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-5">
-          <a href={GET_STARTED_URL} className="btn-primary text-center sm:min-w-44">{content.hero.getStarted}</a>
-          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="btn-secondary flex items-center justify-center gap-2 sm:min-w-52">
+          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="btn-primary flex items-center justify-center gap-2 sm:min-w-48">
             <Github className="w-4 h-4" /> {content.hero.viewGithub}
           </a>
+          <a href={DEMO_URL} className="btn-secondary text-center sm:min-w-44">{content.hero.watchDemo}</a>
+          <a href={GET_STARTED_URL} className="btn-secondary text-center sm:min-w-44">{content.hero.readQuickStart}</a>
         </div>
       </motion.div>
 
       <motion.div className="md:col-span-12 lg:col-span-5 relative flex items-center justify-center p-6 md:p-10 mb-8 md:mb-0" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
-        <div className="relative w-full aspect-square max-w-[260px] sm:max-w-sm lg:max-w-md flex items-center justify-center">
+        <div className="relative w-full max-w-[360px] sm:max-w-md lg:max-w-lg flex items-center justify-center">
           <div className="absolute inset-0 bg-honey/10 blur-[60px] md:blur-[80px] rounded-full" />
-          <BeeIcon className="w-40 h-40 md:w-52 md:h-52 lg:w-56 lg:h-56 text-ink relative z-20" />
+          <div className="relative z-20 grid w-full gap-4 rounded-[2rem] border border-ink/10 bg-paper/80 p-5 shadow-2xl backdrop-blur-md">
+            <div className="grid grid-cols-[1fr_auto_1fr] items-start gap-3 text-left">
+              <div className="rounded-2xl border border-ink/8 bg-surface p-4">
+                <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-ink/45">Before</div>
+                <div className="space-y-2 font-mono text-xs text-ink/60">
+                  {content.hero.visualBefore.map((item) => <div key={item}>{item}</div>)}
+                </div>
+              </div>
+              <div className="pt-12 text-honey font-serif italic">→</div>
+              <div className="rounded-2xl border border-honey/20 bg-honey/8 p-4">
+                <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-honey">After / CodingTeam</div>
+                <div className="space-y-2 font-mono text-xs text-ink/72">
+                  {content.hero.visualAfter.map((item) => <div key={item}>{item}</div>)}
+                </div>
+              </div>
+            </div>
+          </div>
           <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 4, repeat: Infinity }} className="absolute -top-4 sm:top-10 -left-4 sm:left-0 bg-paper/80 backdrop-blur-md border border-ink/10 p-2 sm:p-3 shadow-xl z-30 min-w-36 text-center">
             <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-[0.2em] whitespace-nowrap">{content.hero.floating[0]}</span>
           </motion.div>

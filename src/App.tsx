@@ -7,6 +7,7 @@ import {
   Acknowledgements,
   CodingTeam,
   Faq,
+  FirstTask,
   HeroSection,
   HowItWorks,
   OpenCodeMvp,
@@ -37,10 +38,11 @@ export default function App() {
           <HeroSection content={content} />
           <StatusBar content={content} />
         </div>
-        <ProductHighlights content={content} />
         <ProductRationale content={content} />
+        <ProductHighlights content={content} />
         <HowItWorks content={content} />
         <CodingTeam content={content} />
+        <FirstTask content={content} />
         <ProjectContextRoadmap content={content} />
         <TeamTemplates content={content} />
         <BuilderAudience content={content} />

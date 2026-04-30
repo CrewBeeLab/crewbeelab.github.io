@@ -44,7 +44,7 @@ export const Navbar = ({ content, onToggleLanguage }: { content: HomepageContent
           <button onClick={toggle} className="p-2 rounded-full hover:bg-surface transition-colors text-ink/50 hover:text-ink" aria-label={content.nav.toggleTheme}>
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-          <button className="shrink-0 bg-ink text-paper px-6 py-2.5 border border-ink text-[10px] uppercase font-bold tracking-[0.18em] whitespace-nowrap hover:bg-paper hover:text-ink transition-all min-w-32">{content.nav.installCli}</button>
+          <a href="#docs" className="shrink-0 bg-ink text-paper px-6 py-2.5 border border-ink text-[10px] uppercase font-bold tracking-[0.18em] whitespace-nowrap hover:bg-paper hover:text-ink transition-all min-w-32 text-center">{content.nav.quickStart}</a>
         </div>
 
         <div className="xl:hidden flex shrink-0 items-center gap-4">
@@ -74,7 +74,7 @@ export const Navbar = ({ content, onToggleLanguage }: { content: HomepageContent
                 {content.nav.switchLanguage}
               </button>
             </div>
-            <button className="bg-ink text-paper px-6 py-4 border border-ink text-xs uppercase font-bold tracking-[0.2em] hover:bg-paper hover:text-ink transition-all mt-4 w-full">{content.nav.installCli}</button>
+            <a href="#docs" onClick={() => setIsMobileMenuOpen(false)} className="bg-ink text-paper px-6 py-4 border border-ink text-xs uppercase font-bold tracking-[0.2em] hover:bg-paper hover:text-ink transition-all mt-4 w-full text-center">{content.nav.quickStart}</a>
           </motion.div>
         )}
       </AnimatePresence>

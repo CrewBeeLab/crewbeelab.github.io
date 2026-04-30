@@ -3,6 +3,7 @@ export { BuilderAudience } from './BuilderAudience';
 export { CodingTeam } from './CodingTeam';
 export { Faq } from './Faq';
 export { HeroSection } from './HeroSection';
+export { FirstTask } from './FirstTask';
 export { HowItWorks } from './HowItWorks';
 export { OpenCodeMvp } from './OpenCodeMvp';
 export { ProductHighlights } from './ProductHighlights';
