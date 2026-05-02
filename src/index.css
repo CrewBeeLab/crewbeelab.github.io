@@ -17,17 +17,17 @@
 }
 
 .dark {
-  --theme-ink: #f2eee8;
-  --theme-honey: #f2aa2a;
-  --theme-honey-soft: #d99b2b;
-  --theme-paper: #0c0b0a;
-  --theme-paper-warm: #12100f;
-  --theme-mist: #1a1816;
-  --theme-surface: rgba(255, 255, 255, 0.03);
-  --theme-surface-hover: rgba(255, 255, 255, 0.06);
-  --theme-surface-border: rgba(242, 238, 232, 0.08); /* ink/8 equivalent */
-  --theme-grain-opacity: 0.035;
-  --theme-glow-opacity: 0.7;
+  --theme-ink: #f4efe6;
+  --theme-honey: #f4a51c;
+  --theme-honey-soft: #e5b85a;
+  --theme-paper: #0b0a08;
+  --theme-paper-warm: #12100d;
+  --theme-mist: #1b1814;
+  --theme-surface: rgba(255, 244, 220, 0.035);
+  --theme-surface-hover: rgba(255, 244, 220, 0.065);
+  --theme-surface-border: rgba(245, 168, 29, 0.12);
+  --theme-grain-opacity: 0.045;
+  --theme-glow-opacity: 0.82;
 }
 
 @theme {
@@ -83,6 +83,10 @@
   
   .card-paper {
     @apply bg-surface border border-surface-border shadow-sm hover:shadow-md hover:bg-surface-hover transition-all duration-300 ease-out;
+  }
+
+  .dark .card-paper:hover {
+    box-shadow: 0 0 0 1px rgba(244, 165, 28, 0.08), 0 18px 48px rgba(244, 165, 28, 0.055);
   }
 
   .btn-primary {

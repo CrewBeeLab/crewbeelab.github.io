@@ -23,11 +23,11 @@ export const homepageContent = {
       supporting: 'Define Teams. Pick a Leader. Project structured agent workflows into the harness you use. Simple tasks stay lightweight; complex work gets support, review, and completion gates.',
       boundaries: ['Agent Team asset layer.', 'Harness-adaptable.', 'First adapter: OpenCode.'],
       viewGithub: 'View on GitHub',
-      watchDemo: 'Watch 90s Demo',
+      watchDemo: 'View Workflow',
       readQuickStart: 'Read Quick Start',
       visualBefore: ['prompts.md', 'agent config', 'review notes', 'project rules', 'personal workflow'],
       visualAfter: ['team.manifest.yaml', 'team.policy.yaml', 'coding-leader.agent.md', 'reviewer.agent.md', 'TEAM.md'],
-      floating: ['Define Teams', 'Project to Harness', 'Review & Close']
+      floating: ['Define Team', 'Pick Leader', 'Delegate / Review']
     },
     status: ['Team-first Definitions', 'Runtime Projection', 'Harness Adapter Layer', 'Context-isolated Delegation', 'Review-backed Coding Team', 'Portable Team Assets', 'First Adapter: OpenCode'],
     worksToday: {
@@ -176,7 +176,7 @@ export const homepageContent = {
       badge: 'Final CTA',
       title: 'Ready to turn scattered agents into real teams?',
       paragraphs: ['Read the Quick Start, view the current OpenCode integration, or join Discussions to share your first Team.', 'CrewBee is a harness-adaptable Agent Team asset layer, with OpenCode as the first supported host.'],
-      ctas: { github: 'View GitHub', quickStart: 'Read Quick Start', demo: 'Watch Demo', discussions: 'Join Discussions' }
+      ctas: { github: 'View GitHub', quickStart: 'Read Quick Start', demo: 'View Workflow', discussions: 'Join Discussions' }
     },
     footer: { docs: 'Docs', license: 'License' }
   },
@@ -204,11 +204,11 @@ export const homepageContent = {
       supporting: '定义 Team，选择 Leader，把结构化 Agent 工作流投影到你使用的宿主中。简单任务保持轻量，复杂任务获得支援、review 和完成闸门。',
       boundaries: ['Agent Team 资产层。', '可适配多种 Agent Harness。', '当前首个适配宿主：OpenCode。'],
       viewGithub: '在 GitHub 上查看',
-      watchDemo: '观看 90 秒 Demo',
+      watchDemo: '查看工作流',
       readQuickStart: '阅读快速开始',
       visualBefore: ['prompts.md', 'agent config', 'review notes', 'project rules', 'personal workflow'],
       visualAfter: ['team.manifest.yaml', 'team.policy.yaml', 'coding-leader.agent.md', 'reviewer.agent.md', 'TEAM.md'],
-      floating: ['定义 Team', '投影到宿主', 'Review 收口']
+      floating: ['定义 Team', '选择 Leader', '委派 / Review']
     },
     status: ['Team-first 定义', 'Runtime Projection', '宿主适配层', '上下文隔离式委派', '带 review 的 Coding Team', '可迁移 Team 资产', '首个适配宿主：OpenCode'],
     worksToday: {
@@ -357,7 +357,7 @@ export const homepageContent = {
       badge: '最终 CTA',
       title: '准备把分散的智能体变成真正的团队？',
       paragraphs: ['阅读快速开始，查看当前 OpenCode 集成，或者加入 Discussions 展示你的第一支 Team。', 'CrewBee 是一个可适配不同 Agent Harness 的 Agent Team 资产层，当前首个支持宿主是 OpenCode。'],
-      ctas: { github: '查看 GitHub', quickStart: '阅读快速开始', demo: '观看 Demo', discussions: '加入 Discussions' }
+      ctas: { github: '查看 GitHub', quickStart: '阅读快速开始', demo: '查看工作流', discussions: '加入 Discussions' }
     },
     footer: { docs: '文档', license: '许可证' }
   }

@@ -33,18 +33,18 @@ export const Navbar = ({ content, onToggleLanguage }: { content: HomepageContent
 
         <div className="hidden xl:flex flex-1 min-w-0 items-center justify-end gap-5 ml-8">
           {navItems.map((item) => (
-            <a key={item.key} href={item.href} className="min-w-20 text-center whitespace-nowrap text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-ink/50 hover:text-ink transition-colors duration-200">
+            <a key={item.key} href={item.href} className="min-w-20 text-center whitespace-nowrap text-[11px] font-sans font-bold uppercase tracking-[0.14em] text-ink/62 hover:text-honey transition-colors duration-200">
               {content.nav[item.key]}
             </a>
           ))}
-          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="min-w-20 text-center whitespace-nowrap text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-honey hover:text-honey-soft transition-colors">
+          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="min-w-20 text-center whitespace-nowrap text-[11px] font-sans font-bold uppercase tracking-[0.14em] text-honey hover:text-honey-soft transition-colors">
             {content.nav.github}
           </a>
           <LanguageSwitch label={content.nav.switchLanguage} ariaLabel={content.nav.switchLanguageLabel} onClick={onToggleLanguage} />
           <button onClick={toggle} className="p-2 rounded-full hover:bg-surface transition-colors text-ink/50 hover:text-ink" aria-label={content.nav.toggleTheme}>
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-          <a href={GET_STARTED_URL} className="shrink-0 bg-ink text-paper px-6 py-2.5 border border-ink text-[10px] uppercase font-bold tracking-[0.18em] whitespace-nowrap hover:bg-paper hover:text-ink transition-all min-w-32 text-center">{content.nav.quickStart}</a>
+          <a href={GET_STARTED_URL} className="shrink-0 bg-ink text-paper px-6 py-2.5 border border-ink text-[11px] uppercase font-bold tracking-[0.14em] whitespace-nowrap hover:bg-paper hover:text-ink transition-all min-w-32 text-center">{content.nav.quickStart}</a>
         </div>
 
         <div className="xl:hidden flex shrink-0 items-center gap-4">
