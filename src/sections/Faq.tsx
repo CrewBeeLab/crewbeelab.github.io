@@ -5,7 +5,7 @@ export const Faq = ({ content }: LocalizedSectionProps) => (
     <div className="grid lg:grid-cols-3 gap-10 md:gap-12 lg:gap-14">
       <div className="lg:col-span-1">
         <span className="text-[10px] uppercase font-bold tracking-[0.2em] font-sans text-honey mb-4 md:mb-6 block">{content.faq.badge} //</span>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 md:mb-7 font-serif tracking-tight leading-[1.08]">{content.faq.heading[0]} <br className="hidden lg:block" /> {content.faq.heading[1]} <br className="hidden lg:block" /> {content.faq.heading[2]}</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 md:mb-7 font-serif tracking-tight leading-[1.08]">{content.faq.heading}</h2>
       </div>
       <div className="lg:col-span-2 space-y-7 md:space-y-9">
         {content.faq.items.map((faq) => (

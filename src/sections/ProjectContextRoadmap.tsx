@@ -4,22 +4,11 @@ import { designSystem } from '../config/designSystem';
 import type { LocalizedSectionProps } from './types';
 
 export const ProjectContextRoadmap = ({ content }: LocalizedSectionProps) => (
-  <section id="project-context" className="relative overflow-hidden bg-paper-warm/35 border-b border-ink/5">
+  <section id="project-context" className="relative overflow-hidden bg-paper-warm/20 border-b border-ink/5">
     <div className={designSystem.effect.warmAmbientGlow} />
-    <div className="section-container relative">
-      <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 md:gap-12 lg:gap-14 items-start">
-        <div>
-          <SectionHeading badge={content.projectContext.badge} subtitle={content.projectContext.subtitle}>{content.projectContext.title}</SectionHeading>
-          <div className="grid gap-4 md:gap-5">
-            {content.projectContext.cards.map((card) => (
-              <div key={card.title} className={designSystem.surface.compactCard}>
-                <h3 className="mb-2.5 text-xl md:text-[1.38rem] font-serif text-ink leading-snug">{card.title}</h3>
-                <p className="font-serif text-base md:text-[1.05rem] leading-[1.65] text-ink/64">{card.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
+    <div className="section-container relative max-w-[1200px]">
+      <SectionHeading badge={content.projectContext.badge} subtitle={content.projectContext.subtitle}>{content.projectContext.title}</SectionHeading>
+      <div className="grid lg:grid-cols-[0.45fr_0.55fr] gap-6 md:gap-8 lg:gap-10 items-start opacity-90">
         <div className="relative">
           <div className="absolute inset-0 rounded-full bg-honey/10 blur-[90px]" />
           <div className={designSystem.surface.glassPanel}>
@@ -39,6 +28,15 @@ export const ProjectContextRoadmap = ({ content }: LocalizedSectionProps) => (
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-5">
+          {content.projectContext.cards.map((card) => (
+            <div key={card.title} className={`${designSystem.surface.compactCard} h-full`}>
+              <h3 className="mb-2.5 text-lg md:text-[1.22rem] font-serif text-ink leading-snug">{card.title}</h3>
+              <p className="font-serif text-base md:text-[1.02rem] leading-[1.62] text-ink/64">{card.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

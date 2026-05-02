@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'motion/react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { GITHUB_URL, navItems } from '../config/site';
+import { GET_STARTED_URL, GITHUB_URL, navItems } from '../config/site';
 import { BeeIcon } from '../components/BeeIcon';
 import { LanguageSwitch } from '../components/LanguageSwitch';
 import { useDarkMode } from '../hooks/useDarkMode';
@@ -44,7 +44,7 @@ export const Navbar = ({ content, onToggleLanguage }: { content: HomepageContent
           <button onClick={toggle} className="p-2 rounded-full hover:bg-surface transition-colors text-ink/50 hover:text-ink" aria-label={content.nav.toggleTheme}>
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-          <a href="#docs" className="shrink-0 bg-ink text-paper px-6 py-2.5 border border-ink text-[10px] uppercase font-bold tracking-[0.18em] whitespace-nowrap hover:bg-paper hover:text-ink transition-all min-w-32 text-center">{content.nav.quickStart}</a>
+          <a href={GET_STARTED_URL} className="shrink-0 bg-ink text-paper px-6 py-2.5 border border-ink text-[10px] uppercase font-bold tracking-[0.18em] whitespace-nowrap hover:bg-paper hover:text-ink transition-all min-w-32 text-center">{content.nav.quickStart}</a>
         </div>
 
         <div className="xl:hidden flex shrink-0 items-center gap-4">
@@ -74,7 +74,7 @@ export const Navbar = ({ content, onToggleLanguage }: { content: HomepageContent
                 {content.nav.switchLanguage}
               </button>
             </div>
-            <a href="#docs" onClick={() => setIsMobileMenuOpen(false)} className="bg-ink text-paper px-6 py-4 border border-ink text-xs uppercase font-bold tracking-[0.2em] hover:bg-paper hover:text-ink transition-all mt-4 w-full text-center">{content.nav.quickStart}</a>
+            <a href={GET_STARTED_URL} onClick={() => setIsMobileMenuOpen(false)} className="bg-ink text-paper px-6 py-4 border border-ink text-xs uppercase font-bold tracking-[0.2em] hover:bg-paper hover:text-ink transition-all mt-4 w-full text-center">{content.nav.quickStart}</a>
           </motion.div>
         )}
       </AnimatePresence>

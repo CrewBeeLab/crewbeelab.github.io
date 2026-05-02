@@ -11,10 +11,12 @@ import {
   HeroSection,
   HowItWorks,
   OpenCodeMvp,
+  OpenSourceInspiration,
   ProjectContextRoadmap,
   BuilderAudience,
   StatusBar,
   TeamTemplates,
+  WhatWorksToday,
   ProductHighlights,
   ProductRationale
 } from './sections';
@@ -34,20 +36,22 @@ export default function App() {
       <Navbar content={content} onToggleLanguage={toggleLanguage} />
 
       <main>
-        <div className="min-h-dvh flex flex-col">
+        <div className="min-h-[100svh] flex flex-col">
           <HeroSection content={content} />
           <StatusBar content={content} />
         </div>
         <ProductRationale content={content} />
-        <ProductHighlights content={content} />
+        <WhatWorksToday content={content} />
         <HowItWorks content={content} />
         <CodingTeam content={content} />
         <FirstTask content={content} />
-        <ProjectContextRoadmap content={content} />
+        <ProductHighlights content={content} />
         <TeamTemplates content={content} />
         <BuilderAudience content={content} />
         <OpenCodeMvp content={content} />
+        <ProjectContextRoadmap content={content} />
         <Faq content={content} />
+        <OpenSourceInspiration content={content} />
         <Acknowledgements content={content} />
       </main>
 
