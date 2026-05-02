@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 :root {
+  --header-height: 88px;
   --theme-ink: #15120f;
   --theme-honey: #d99b2b;
   --theme-honey-soft: #e7b95a;
@@ -54,6 +55,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+  }
+
+  section {
+    scroll-margin-top: var(--header-height);
   }
 
   html[lang="zh-CN"],

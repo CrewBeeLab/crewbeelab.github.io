@@ -23,11 +23,11 @@ export const HeroSection = ({ content }: LocalizedSectionProps) => (
         </div>
 
         <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-5">
-          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="btn-primary flex items-center justify-center gap-2 sm:min-w-48">
+          <a href={GET_STARTED_URL} className="btn-primary text-center sm:min-w-44">{content.hero.readQuickStart}</a>
+          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="btn-secondary flex items-center justify-center gap-2 sm:min-w-48">
             <Github className="w-4 h-4" /> {content.hero.viewGithub}
           </a>
           <a href={DEMO_URL} className="btn-secondary text-center sm:min-w-44">{content.hero.watchDemo}</a>
-          <a href={GET_STARTED_URL} className="btn-secondary text-center sm:min-w-44">{content.hero.readQuickStart}</a>
         </div>
       </motion.div>
 

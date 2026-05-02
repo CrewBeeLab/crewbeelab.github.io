@@ -25,7 +25,7 @@ export const ProjectContextRoadmap = ({ content }: LocalizedSectionProps) => (
           <div className={designSystem.surface.glassPanel}>
             <div className="mb-7 flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-honey" />
-              <AccentLabel>Project Context Loop</AccentLabel>
+              <AccentLabel>{content.projectContext.flowTitle}</AccentLabel>
             </div>
             <div className="space-y-4">
               {content.projectContext.flow.map((step, index) => (

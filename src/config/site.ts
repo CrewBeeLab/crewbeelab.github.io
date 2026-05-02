@@ -1,6 +1,6 @@
 export const GITHUB_URL = 'https://github.com/CrewBeeLab/CrewBee';
 export const DISCUSSIONS_URL = `${GITHUB_URL}/discussions`;
-export const GET_STARTED_URL = '#docs';
+export const GET_STARTED_URL = '#first-task';
 export const DEMO_URL = '#first-task';
 export const SITE_URL = 'https://crewbeelab.github.io/';
 export const LANGUAGE_STORAGE_KEY = 'crewbee-language';
