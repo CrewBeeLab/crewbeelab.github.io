@@ -1,9 +1,9 @@
 import type { LocalizedSectionProps } from './types';
 
 export const Faq = ({ content }: LocalizedSectionProps) => (
-  <section id="docs" className="section-container border-y border-ink/5 bg-paper-warm/20">
+  <section className="section-container border-y border-ink/5 bg-paper-warm/20">
     <div className="grid lg:grid-cols-3 gap-10 md:gap-12 lg:gap-14">
-      <div className="lg:col-span-1">
+      <div id="docs" className="anchor-target lg:col-span-1">
         <span className="text-[10px] uppercase font-bold tracking-[0.2em] font-sans text-honey mb-4 md:mb-6 block">{content.faq.badge} //</span>
         <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 md:mb-7 font-serif tracking-tight leading-[1.08]">{content.faq.heading}</h2>
       </div>

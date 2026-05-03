@@ -5,8 +5,8 @@ import type { LocalizedSectionProps } from './types';
 const stepIcons = [<Code2 className="w-6 h-6 md:w-8 md:h-8" />, <Layers className="w-6 h-6 md:w-8 md:h-8" />, <GitBranch className="w-6 h-6 md:w-8 md:h-8" />, <Network className="w-6 h-6 md:w-8 md:h-8" />, <Terminal className="w-6 h-6 md:w-8 md:h-8" />];
 
 export const HowItWorks = ({ content }: LocalizedSectionProps) => (
-  <section id="how-it-works" className="section-container border-b border-ink/5">
-    <SectionHeading centered subtitle={content.how.subtitle}>{content.how.title}</SectionHeading>
+  <section className="section-container border-b border-ink/5">
+    <SectionHeading id="how-it-works" className="anchor-target" centered subtitle={content.how.subtitle}>{content.how.title}</SectionHeading>
     <div className="max-w-6xl mx-auto relative">
       <div className="hidden md:block absolute top-[48px] left-[15%] right-[15%] h-px bg-ink/10" />
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-9 md:gap-10 lg:gap-8 relative z-10">

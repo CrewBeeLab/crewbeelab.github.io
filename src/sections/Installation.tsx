@@ -52,9 +52,9 @@ export const Installation = ({ content }: LocalizedSectionProps) => {
   const copyLabel = copyState === 'copied' ? content.installation.copied : copyState === 'failed' ? content.installation.copyFailed : content.installation.copy;
 
   return (
-    <section id="installation" className="section-container border-b border-ink/5 pt-16 md:pt-20 lg:pt-24">
+    <section className="section-container border-b border-ink/5 pt-16 md:pt-20 lg:pt-24">
       <div className="grid gap-8 md:gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
-        <div className="max-w-[520px]">
+        <div id="installation" className="anchor-target max-w-[520px]">
           <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.22em] text-honey">{content.installation.badge} //</span>
           <h2 className="mb-4 font-serif text-3xl leading-[1.08] text-ink md:text-5xl lg:text-[3.35rem]">{content.installation.title}</h2>
           <p className="mb-5 font-serif text-base leading-[1.68] text-ink/68 md:text-lg">{content.installation.subtitle}</p>

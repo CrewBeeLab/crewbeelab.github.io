@@ -4,10 +4,10 @@ import { designSystem } from '../config/designSystem';
 import type { LocalizedSectionProps } from './types';
 
 export const ProjectContextRoadmap = ({ content }: LocalizedSectionProps) => (
-  <section id="project-context" className="relative overflow-hidden bg-paper-warm/20 border-b border-ink/5">
+  <section className="relative overflow-hidden bg-paper-warm/20 border-b border-ink/5">
     <div className={designSystem.effect.warmAmbientGlow} />
     <div className="section-container relative max-w-[1200px]">
-      <SectionHeading badge={content.projectContext.badge} subtitle={content.projectContext.subtitle}>{content.projectContext.title}</SectionHeading>
+      <SectionHeading id="project-context" className="anchor-target" badge={content.projectContext.badge} subtitle={content.projectContext.subtitle}>{content.projectContext.title}</SectionHeading>
       <div className="grid lg:grid-cols-[0.45fr_0.55fr] gap-6 md:gap-8 lg:gap-10 items-start opacity-90">
         <div className="relative">
           <div className="absolute inset-0 rounded-full bg-honey/10 blur-[90px]" />

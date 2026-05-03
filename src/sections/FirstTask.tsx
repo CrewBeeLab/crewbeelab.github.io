@@ -19,7 +19,7 @@ export const FirstTask = ({ content }: LocalizedSectionProps) => {
   const copyLabel = copyState === 'copied' ? content.firstTask.copied : copyState === 'failed' ? content.firstTask.copyFailed : content.firstTask.copyPrompt;
 
   return (
-    <section id="first-task" className="section-container border-b border-ink/5">
+    <section id="first-task" className="anchor-target section-container border-b border-ink/5">
       <div className="grid lg:grid-cols-[0.4fr_0.6fr] gap-8 md:gap-10 lg:gap-12 items-center">
         <div className="max-w-[430px]">
           <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.2em] text-honey">{content.firstTask.badge} //</span>

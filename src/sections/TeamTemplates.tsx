@@ -3,9 +3,9 @@ import { designSystem } from '../config/designSystem';
 import type { LocalizedSectionProps } from './types';
 
 export const TeamTemplates = ({ content }: LocalizedSectionProps) => (
-  <section id="teams" className="bg-ink text-paper py-20 md:py-28 lg:py-36 px-6">
+  <section className="bg-ink text-paper py-20 md:py-28 lg:py-36 px-6">
     <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-14 lg:gap-20 items-center">
-      <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+      <motion.div id="teams" className="anchor-target" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
         <span className={designSystem.typography.badge}>{content.team.badge} //</span>
         <h2 className="text-3xl md:text-5xl lg:text-[3.45rem] font-serif leading-[1.08] mb-5 md:mb-7 text-paper">{content.team.title}</h2>
         <p className="text-lg md:text-[1.35rem] font-serif text-paper/70 leading-[1.68] mb-5 md:mb-7">{content.team.paragraphs[0]}</p>

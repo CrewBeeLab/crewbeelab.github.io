@@ -5,10 +5,10 @@ import { SectionHeading } from '../components/SectionHeading';
 import type { LocalizedSectionProps } from './types';
 
 export const CodingTeam = ({ content }: LocalizedSectionProps) => (
-  <section id="coding-team" className="section-container border-b border-ink/5">
+  <section className="section-container border-b border-ink/5">
     <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 md:gap-12 lg:gap-14 items-start">
       <div className="lg:sticky lg:top-28">
-        <SectionHeading badge={content.codingTeam.badge} subtitle={content.codingTeam.subtitle}>{content.codingTeam.title}</SectionHeading>
+        <SectionHeading id="coding-team" className="anchor-target" badge={content.codingTeam.badge} subtitle={content.codingTeam.subtitle}>{content.codingTeam.title}</SectionHeading>
         <div className="card-paper bg-surface p-6 md:p-7 lg:p-8">
           <div className="mb-5 flex items-center gap-3">
             <div className="h-2 w-2 rounded-full bg-honey" />

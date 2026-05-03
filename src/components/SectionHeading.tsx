@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
-export const SectionHeading = ({ children, badge, subtitle, centered = false }: { children: ReactNode; badge?: string; subtitle?: string; centered?: boolean }) => (
-  <div className={`mb-11 md:mb-14 lg:mb-16 ${centered ? 'text-center' : ''}`}>
+export const SectionHeading = ({ children, badge, subtitle, centered = false, id, className = '' }: { children: ReactNode; badge?: string; subtitle?: string; centered?: boolean; id?: string; className?: string }) => (
+  <div id={id} className={`mb-11 md:mb-14 lg:mb-16 ${centered ? 'text-center' : ''} ${className}`}>
     {badge && (
       <span className="inline-block text-[10px] uppercase font-sans font-bold tracking-[0.2em] text-honey mb-4">
         {badge} //

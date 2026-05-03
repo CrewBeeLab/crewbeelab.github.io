@@ -3,6 +3,7 @@
 
 :root {
   --header-height: 88px;
+  --anchor-offset: 160px;
   --theme-ink: #15120f;
   --theme-honey: #d99b2b;
   --theme-honey-soft: #e7b95a;
@@ -55,11 +56,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height);
+    scroll-padding-top: 0;
   }
 
   section {
-    scroll-margin-top: var(--header-height);
+    scroll-margin-top: 0;
   }
 
   html[lang="zh-CN"],
@@ -99,6 +100,16 @@
 
   .editorial-border {
     @apply border-[0.5px] border-ink opacity-10;
+  }
+
+  .anchor-target {
+    scroll-margin-top: var(--anchor-offset);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --anchor-offset: 136px;
   }
 }
 
