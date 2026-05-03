@@ -1,4 +1,4 @@
-import { GITHUB_URL } from '../config/site';
+import { DOCS_URL, GITHUB_URL } from '../config/site';
 import { BeeIcon } from '../components/BeeIcon';
 import type { HomepageContent } from '../i18n/homepageContent';
 
@@ -11,8 +11,7 @@ export const Footer = ({ content }: { content: HomepageContent }) => (
       </div>
       <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/40">
         <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="hover:text-honey transition-colors">GitHub</a>
-        <a href="#docs" className="hover:text-honey transition-colors">{content.footer.docs}</a>
-        <a href="#" className="hover:text-honey transition-colors">{content.footer.license}</a>
+        <a href={DOCS_URL} className="hover:text-honey transition-colors">{content.footer.docs}</a>
       </div>
     </div>
   </footer>

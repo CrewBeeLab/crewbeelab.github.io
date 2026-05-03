@@ -1,23 +1,7 @@
-import { useState } from 'react';
-import { Copy } from 'lucide-react';
 import { GET_STARTED_URL } from '../config/site';
 import type { LocalizedSectionProps } from './types';
 
 export const FirstTask = ({ content }: LocalizedSectionProps) => {
-  const [copyState, setCopyState] = useState<'idle' | 'copied' | 'failed'>('idle');
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(content.firstTask.prompt);
-      setCopyState('copied');
-    } catch (error) {
-      console.error('Failed to copy CrewBee prompt', error);
-      setCopyState('failed');
-    }
-  };
-
-  const copyLabel = copyState === 'copied' ? content.firstTask.copied : copyState === 'failed' ? content.firstTask.copyFailed : content.firstTask.copyPrompt;
-
   return (
     <section id="first-task" className="anchor-target section-container border-b border-ink/5">
       <div className="grid lg:grid-cols-[0.4fr_0.6fr] gap-8 md:gap-10 lg:gap-12 items-center">
@@ -40,9 +24,6 @@ export const FirstTask = ({ content }: LocalizedSectionProps) => {
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-honey">Prompt Card</span>
             <div className="flex flex-wrap items-center gap-3">
               <a href={GET_STARTED_URL} className="text-[10px] font-bold uppercase tracking-[0.18em] text-paper/55 transition-colors hover:text-honey">{content.firstTask.quickStartFirst}</a>
-              <button type="button" onClick={handleCopy} className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-paper/65 transition-colors hover:text-honey">
-                <Copy className="h-4 w-4" /> {copyLabel}
-              </button>
             </div>
           </div>
           <p className="relative z-10 whitespace-pre-line font-mono text-sm md:text-base leading-[1.8] text-paper/78">{content.firstTask.prompt}</p>

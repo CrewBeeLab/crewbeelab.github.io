@@ -34,18 +34,18 @@ export const homepageContent = {
       badge: 'QUICK START',
       title: 'Install CrewBee for OpenCode.',
       subtitle: 'Set up CrewBee with one command, open your project, and start with the built-in Coding Team.',
-      note: 'No project-local node_modules. No manual OpenCode config editing. CrewBee installs into the OpenCode user-level workspace and runs doctor checks.',
+      note: 'No project-local node_modules. No manual OpenCode config editing. CrewBee installs into the OpenCode user-level workspace and runs setup verification.',
       commandLabel: 'Recommended',
       command: 'npx crewbee@latest setup --with-opencode',
       copy: 'Copy',
       copied: 'Copied',
       copyFailed: 'Copy failed',
       steps: [
-        { title: 'Setup', desc: 'Install OpenCode if needed, install CrewBee, write the plugin entry, and run doctor.' },
+        { title: 'Setup', desc: 'Install OpenCode if needed, install CrewBee, write the plugin entry, and verify the setup.' },
         { title: 'Open project', desc: 'Run `opencode` inside a repository you care about.' },
         { title: 'Pick coding-leader', desc: 'Use the built-in Coding Team for a real task with review-backed completion.' }
       ],
-      links: ['Read full installation guide', 'Run doctor checks', 'View GitHub'],
+      links: ['Read full installation guide', 'View GitHub'],
       afterSetup: 'After setup, use the first task prompt below to try the built-in Coding Team.'
     },
     worksToday: {
@@ -133,9 +133,6 @@ export const homepageContent = {
       subtitle: 'Today, start with the OpenCode adapter and ask the built-in Coding Team to solve one real task in a repository you care about.',
       steps: ['Install CrewBee for OpenCode', 'Open your project and select `coding-leader`', 'Paste a real task and ask for review-backed completion'],
       prompt: 'Use CrewBee Coding Team to fix this issue with review-backed completion.\nKeep simple steps lightweight. If the task is non-trivial, locate the relevant code, implement the fix, run available diagnostics/build/tests, and ask reviewer to check risks before final closure.',
-      copyPrompt: 'Copy Prompt',
-      copied: 'Copied',
-      copyFailed: 'Copy failed',
       quickStartFirst: 'Read Quick Start first'
     },
     projectContext: {
@@ -165,8 +162,8 @@ export const homepageContent = {
     opencode: {
       title: 'OpenCode-ready today',
       description: 'OpenCode is the current adapter: CrewBee projects Team definitions into selectable agents, binds sessions, and supports structured delegation through the plugin runtime.',
-      links: ['Read installation guide', 'Run doctor checks', 'View adapter docs'],
-      proofs: ['✓ Team / Agent Definitions', '✓ Team Library Assembly and Validation', '✓ Runtime Projection', '✓ Formal Leader Default Selection', '✓ Agent Config Projection', '✓ Session Binding', '✓ Delegation Tooling', '✓ User-level Install', '✓ Doctor Checks', '✓ Uninstall / Version Commands', '✓ Background Update Path']
+      links: ['Read installation guide'],
+      proofs: ['✓ Team / Agent Definitions', '✓ Team Library Assembly and Validation', '✓ Runtime Projection', '✓ Formal Leader Default Selection', '✓ Agent Config Projection', '✓ Session Binding', '✓ Delegation Tooling', '✓ User-level Install', '✓ Setup Verification', '✓ Uninstall / Version Commands', '✓ Background Update Path']
     },
     inspired: {
       badge: 'Acknowledgement',
@@ -196,7 +193,21 @@ export const homepageContent = {
       paragraphs: ['Read the Quick Start, view the current OpenCode integration, or join Discussions to share your first Team.', 'CrewBee is a harness-adaptable Agent Team asset layer, with OpenCode as the first supported host.'],
       ctas: { github: 'View GitHub', quickStart: 'Read Quick Start', demo: 'View Workflow', discussions: 'Join Discussions' }
     },
-    footer: { docs: 'Docs', license: 'License' }
+    notImplemented: {
+      docs: {
+        badge: 'Coming soon',
+        title: 'Docs are not available yet.',
+        description: 'This page is intentionally left blank for now. We will add product documentation before the public launch.',
+        backHome: 'Back to homepage'
+      },
+      workflow: {
+        badge: 'Coming soon',
+        title: 'Workflow demo is not available yet.',
+        description: 'This page is intentionally left blank for now. We will add a real workflow demo before using this CTA publicly.',
+        backHome: 'Back to homepage'
+      }
+    },
+    footer: { docs: 'Docs' }
   },
   zh: {
     siteTitle: 'CrewBee | 把分散的智能体变成真正的团队',
@@ -233,18 +244,18 @@ export const homepageContent = {
       badge: '快速开始',
       title: '为 OpenCode 安装 CrewBee。',
       subtitle: '一条命令完成配置，打开你的项目，从内置 Coding Team 开始试用。',
-      note: '不安装到业务项目 node_modules，不需要手动修改 OpenCode 配置。CrewBee 会安装到 OpenCode 用户级 workspace，并运行 doctor 检查。',
+      note: '不安装到业务项目 node_modules，不需要手动修改 OpenCode 配置。CrewBee 会安装到 OpenCode 用户级 workspace，并运行安装校验。',
       commandLabel: '推荐命令',
       command: 'npx crewbee@latest setup --with-opencode',
       copy: '复制',
       copied: '已复制',
       copyFailed: '复制失败',
       steps: [
-        { title: '安装并检查', desc: '需要时安装 OpenCode，安装 CrewBee，写入 plugin entry，并运行 doctor。' },
+        { title: '安装并检查', desc: '需要时安装 OpenCode，安装 CrewBee，写入 plugin entry，并校验安装结果。' },
         { title: '打开项目', desc: '在你关心的代码仓库中运行 `opencode`。' },
         { title: '选择 coding-leader', desc: '使用内置 Coding Team 执行一个带 review-backed completion 的真实任务。' }
       ],
-      links: ['阅读完整安装指南', '运行 doctor 检查', '查看 GitHub'],
+      links: ['阅读完整安装指南', '查看 GitHub'],
       afterSetup: '安装完成后，可以使用下方第一个任务提示词试用内置 Coding Team。'
     },
     worksToday: {
@@ -332,9 +343,6 @@ export const homepageContent = {
       subtitle: '当前先从 OpenCode adapter 开始：在一个真实项目中，让内置 Coding Team 完成一次真实代码任务。',
       steps: ['为 OpenCode 安装 CrewBee', '打开项目并选择 `coding-leader`', '粘贴真实任务，并要求 review-backed completion'],
       prompt: '使用 CrewBee Coding Team 修复这个问题，并用 review-backed completion 收口。\n简单步骤保持轻量。如果任务并非琐碎，请定位相关代码，实现修复，运行可用的 diagnostics/build/tests，并在最终收口前让 reviewer 检查风险。',
-      copyPrompt: '复制 Prompt',
-      copied: '已复制',
-      copyFailed: '复制失败',
       quickStartFirst: '先阅读快速开始'
     },
     projectContext: {
@@ -364,8 +372,8 @@ export const homepageContent = {
     opencode: {
       title: '当前可用于 OpenCode',
       description: 'OpenCode 是当前 adapter：CrewBee 可以把 Team 定义投影成可选择的 Agent，并通过插件运行时支持 session binding 与结构化委派。',
-      links: ['阅读安装指南', '运行 doctor 校验', '查看适配器文档'],
-      proofs: ['✓ Team / Agent 定义', '✓ Team Library 装配与校验', '✓ Runtime Projection', '✓ Formal Leader 默认入口选择', '✓ Agent 配置投影', '✓ Session Binding', '✓ Delegation Tooling', '✓ 用户级安装', '✓ Doctor 校验', '✓ Uninstall / Version 命令', '✓ 后台更新路径']
+      links: ['阅读安装指南'],
+      proofs: ['✓ Team / Agent 定义', '✓ Team Library 装配与校验', '✓ Runtime Projection', '✓ Formal Leader 默认入口选择', '✓ Agent 配置投影', '✓ Session Binding', '✓ Delegation Tooling', '✓ 用户级安装', '✓ 安装校验', '✓ Uninstall / Version 命令', '✓ 后台更新路径']
     },
     inspired: {
       badge: '致谢',
@@ -395,7 +403,21 @@ export const homepageContent = {
       paragraphs: ['阅读快速开始，查看当前 OpenCode 集成，或者加入 Discussions 展示你的第一支 Team。', 'CrewBee 是一个可适配不同 Agent Harness 的 Agent Team 资产层，当前首个支持宿主是 OpenCode。'],
       ctas: { github: '查看 GitHub', quickStart: '阅读快速开始', demo: '查看工作流', discussions: '加入 Discussions' }
     },
-    footer: { docs: '文档', license: '许可证' }
+    notImplemented: {
+      docs: {
+        badge: '即将开放',
+        title: '文档页面暂未实现。',
+        description: '这个页面当前有意保持为空白提示页。正式上线前会补齐产品文档。',
+        backHome: '返回首页'
+      },
+      workflow: {
+        badge: '即将开放',
+        title: '工作流演示暂未实现。',
+        description: '这个页面当前有意保持为空白提示页。正式对外使用该 CTA 前会补齐真实工作流演示。',
+        backHome: '返回首页'
+      }
+    },
+    footer: { docs: '文档' }
   }
 } as const;
 

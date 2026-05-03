@@ -1,7 +1,9 @@
 export const GITHUB_URL = 'https://github.com/CrewBeeLab/CrewBee';
 export const DISCUSSIONS_URL = `${GITHUB_URL}/discussions`;
+export const INSTALLATION_GUIDE_URL = `${GITHUB_URL}/blob/main/docs/guide/installation.md`;
 export const GET_STARTED_URL = '#installation';
-export const DEMO_URL = '#first-task';
+export const DEMO_URL = '#not-implemented-workflow';
+export const DOCS_URL = '#not-implemented-docs';
 export const SITE_URL = 'https://crewbeelab.github.io/';
 export const LANGUAGE_STORAGE_KEY = 'crewbee-language';
 export const EN_PATH_PREFIX = '/en/';
@@ -15,5 +17,5 @@ export const navItems: ReadonlyArray<{ href: string; key: NavItemKey }> = [
   { href: '#how-it-works', key: 'how' },
   { href: '#teams', key: 'templates' },
   { href: '#project-context', key: 'roadmap' },
-  { href: '#docs', key: 'docs' }
+  { href: DOCS_URL, key: 'docs' }
 ];

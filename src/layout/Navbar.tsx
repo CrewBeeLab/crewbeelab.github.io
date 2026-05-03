@@ -26,10 +26,10 @@ export const Navbar = ({ content, onToggleLanguage }: { content: HomepageContent
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-paper/90 backdrop-blur-md border-b border-ink/5 py-3.5' : 'bg-transparent py-6 md:py-7'}`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-16 flex items-center justify-between">
-        <div className="flex shrink-0 items-center gap-4 group cursor-pointer">
+        <a href="#top" className="flex shrink-0 items-center gap-4 group">
           <BeeIcon className="w-8 h-8 text-ink" />
           <span className="text-[14px] font-sans font-bold tracking-[0.2em] uppercase mt-1">CrewBee</span>
-        </div>
+        </a>
 
         <div className="hidden xl:flex flex-1 min-w-0 items-center justify-end gap-5 ml-8">
           {navItems.map((item) => (

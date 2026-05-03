@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Copy } from 'lucide-react';
-import { GITHUB_URL } from '../config/site';
+import { GITHUB_URL, INSTALLATION_GUIDE_URL } from '../config/site';
 import type { LocalizedSectionProps } from './types';
 
-const installationLinkHrefs = [GITHUB_URL, '#docs', GITHUB_URL] as const;
+const installationLinkHrefs = [INSTALLATION_GUIDE_URL, GITHUB_URL] as const;
 
 const renderCommand = (command: string) => {
   const parts = command.split(/(crewbee@latest|--with-opencode)/g);
@@ -97,7 +97,7 @@ export const Installation = ({ content }: LocalizedSectionProps) => {
         <p className="font-serif text-sm leading-[1.65] text-ink/58 md:text-base">{content.installation.afterSetup}</p>
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-end">
           {content.installation.links.map((link, index) => (
-            <a key={link} href={installationLinkHrefs[index] ?? GITHUB_URL} target={index === 0 || index === 2 ? '_blank' : undefined} rel={index === 0 || index === 2 ? 'noreferrer' : undefined} className="group inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/62 transition-colors hover:text-honey">
+            <a key={link} href={installationLinkHrefs[index] ?? GITHUB_URL} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/62 transition-colors hover:text-honey">
               {link} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           ))}

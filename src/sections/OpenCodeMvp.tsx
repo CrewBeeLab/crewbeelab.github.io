@@ -1,8 +1,8 @@
 import { ArrowRight } from 'lucide-react';
-import { GET_STARTED_URL, GITHUB_URL } from '../config/site';
+import { INSTALLATION_GUIDE_URL } from '../config/site';
 import type { LocalizedSectionProps } from './types';
 
-const integrationLinkHrefs = [GITHUB_URL, GET_STARTED_URL, '#docs'] as const;
+const integrationLinkHrefs = [INSTALLATION_GUIDE_URL] as const;
 
 export const OpenCodeMvp = ({ content }: LocalizedSectionProps) => (
   <section className="py-20 md:py-28 lg:py-36 max-w-6xl mx-auto px-6 text-center">
@@ -17,7 +17,7 @@ export const OpenCodeMvp = ({ content }: LocalizedSectionProps) => (
     </div>
     <div className="flex flex-col sm:flex-row items-center justify-center gap-5 md:gap-8">
       {content.opencode.links.map((item, index) => (
-        <a key={item} href={integrationLinkHrefs[index] ?? GET_STARTED_URL} target={index === 0 ? '_blank' : undefined} rel={index === 0 ? 'noreferrer' : undefined} className="text-ink font-bold uppercase tracking-[0.2em] text-[10px] md:text-[11px] flex items-center gap-2 hover:text-honey transition-colors group">
+        <a key={item} href={integrationLinkHrefs[index] ?? INSTALLATION_GUIDE_URL} target="_blank" rel="noreferrer" className="text-ink font-bold uppercase tracking-[0.2em] text-[10px] md:text-[11px] flex items-center gap-2 hover:text-honey transition-colors group">
           {item} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </a>
       ))}
