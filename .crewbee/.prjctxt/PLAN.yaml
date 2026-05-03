@@ -1,0 +1,12 @@
+project_id: crewbeelab-github-io
+cycles:
+  - id: C1
+    title: CrewBee website product-positioning refresh through v2.2.2 harness-adaptable messaging
+    status: active
+    steps:
+      - id: S1
+        title: Initial homepage copy/section refresh for CrewBee Agent Team positioning
+        status: completed
+      - id: S2
+        title: Review and commit v2.2.2 website refresh
+        status: active

@@ -1,0 +1,36 @@
+project_id: crewbeelab-github-io
+run_status: running
+active_cycle: C1
+active_step_id: S2
+last_checkpoint: CP-0010
+blockers: []
+next_actions:
+  - action: >-
+      Inspect the uncommitted v2.2.2 harness-adaptable homepage refresh plus all
+      launch-readiness link/CTA cleanup, not-implemented pages, bilingual content
+      updates, final-CTA Welcome/first-task GitHub Discussion links, and prior
+      visual/refactor/story-order/anchor fixes; verify no unrelated artifacts are
+      included before commit.
+    owner: active-agent
+    source: latest-session
+  - action: >-
+      When real Docs or Workflow destinations become available, replace the
+      current not-implemented placeholder hash routes with the real pages or
+      external targets while preserving bilingual copy parity.
+    owner: active-agent
+    source: latest-session
+  - action: >-
+      Optionally perform browser or screenshot preview if pixel-level approval is required; prior review was code/Tailwind breakpoint based only.
+    owner: active-agent
+    source: latest-session
+  - action: >-
+      Commit the approved v2.2.2 homepage copy/CTA/config, typography,
+      interaction, layout, story-order, Installation / Quick Start onboarding,
+      latest Quick Start visual hierarchy refinement, latest Quick Start desktop
+      rhythm/code-highlight follow-up, sticky-header-safe anchor positioning, latest
+      launch-readiness cleanup, default-dark theme initialization, final-CTA
+      Welcome/first-task Discussion links, and generic section-render
+      tool/scripts/docs when ready; keep generated render PNGs out of the commit
+      unless explicitly needed as artifacts.
+    owner: active-agent
+    source: latest-session

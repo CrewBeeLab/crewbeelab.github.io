@@ -1,0 +1,48 @@
+# Decisions
+
+- Position CrewBee as a harness-adaptable Agent Team layer, not a prompt pack; OpenCode is the first/current adapter.
+- Use a bilingual marketing page with centralized copy data and typed section props.
+- Mark Project Context as "Next" to avoid implying the capability is fully complete today.
+- Add dedicated product sections for the built-in Coding Team and Project Context rather than burying them only in highlight cards.
+- Extract repeated visual style class groups into a semantic shared design-system config plus small reusable presentation components where they remove duplication without changing UX.
+- Keep section components thin by using a shared localized section prop type instead of repeating inline `{ t: Copy }` annotations.
+- Rename the centralized content module from generic `copy` to `homepageContent` and type it as `HomepageContent` to reflect website-homepage domain ownership.
+- Use `content` as the localized section prop name instead of `t` to avoid implying a translation function.
+- Keep section filenames and exports aligned with current product-story responsibilities rather than legacy narrative labels.
+- Keep React reconciliation metadata (`key`) at list-rendering call sites, not in reusable card component props.
+- Avoid keeping unused design-system tokens/types as premature public abstractions; reintroduce only when a real call site needs them.
+- Treat visual improvements as same-style density/typography polish only: preserve all copy, modules, navigation, links, interactions, brand palette, and existing library choices.
+- Let Hero copy size naturally instead of enforcing fixed title/body minimum heights, improving bilingual responsiveness while keeping the same content and layout intent.
+- Standardize v2.2.2 website language around maintainable Agent Team assets for agent harnesses while preserving the underlying "turn scattered agents into real teams" idea.
+- Keep roadmap/future-capability wording bounded so current copy does not imply Project Context or future team templates are fully complete today.
+- Expose final CTA links for GitHub, Quick Start, Demo, and Discussions, with quick-start/demo-style flows currently using the First Task anchor until a dedicated demo exists.
+- Avoid large-scale italic typography in the English homepage; reserve italic styling only for deliberate emphasis so both English and Chinese read cleanly and consistently.
+- Treat `assets/crewbee-icon-nobg.png` as the canonical CrewBee logo asset for the website Hero visual, matching the published homepage layout and floating label treatment.
+- Keep Hero and Navbar container sizing aligned with the published site using a shared 1400px max-width and medium-breakpoint horizontal padding rhythm.
+- Reposition v2.2.2 website messaging as harness-adaptable: CrewBee creates Agent Team assets for agent harnesses, while OpenCode is described as the first/current supported adapter instead of the whole product boundary.
+- Present Team Assets as an explanatory file tree with descriptions rather than a horizontal code-block list, improving scanability without changing the asset model.
+- Add copyable First Task/Quick Start behavior and fix integration CTAs so visible actions are real links/anchors, not inert buttons.
+- Add sticky-header-safe scroll padding/margins for in-page anchors.
+- Keep the homepage story focused on present OpenCode-ready value first: explain what works today, then how teams/delegation work, then first-task onboarding; keep roadmap material later and visibly bounded as future direction.
+- Use Before/After contrast in the rationale section and a three-step Quick Start plus copyable prompt card to make the product transition and initial action concrete.
+- Do not use MIT/open-source licensing as a primary hero, trust-strip, or final-CTA selling point; keep top-level copy focused on harness-adaptable Agent Team assets and OpenCode as the first adapter, with license details relegated to low-priority surfaces.
+- Keep the "inspired by open-source Agent ecosystems" story as its own quiet section near the end of the homepage instead of using license language as primary sales copy.
+- Explain execution choices as explicit Leader vs Executor paths: Leader owns delegation/review/closure for complex work, while Executor handles clear direct single-agent execution.
+- Keep task-oriented Quick Start CTAs anchored to the First Task onboarding section until a separate docs/demo destination exists; primary install/get-started CTAs may target the dedicated Installation section.
+- Place First Task immediately after Coding Team so onboarding appears near the core action path, while keeping Product Highlights and templates after that quick-start bridge.
+- Place Open Source Inspiration after FAQ as a quiet acknowledgement before the final CTA, using a light full-width paper treatment rather than a mid-page card.
+- Keep Chinese homepage content structurally and semantically aligned with the English canonical content whenever English positioning changes.
+- Use warmer honey/paper accents for dark-mode marketing polish and avoid promising a demo video before one exists; label the former Demo CTA as a workflow view until a dedicated demo asset is available.
+- Put the primary website onboarding CTA on an early Installation section, using `#installation` and localized `Install CLI` / `安装 CLI` nav labels, while preserving the First Task section as the task-oriented follow-up path.
+- Present recommended installation as `npx crewbee@latest setup --with-opencode`, with copy explicitly bounded to user-level OpenCode setup/no project-local dependency/manual-config avoidance/setup verification, not public doctor-check CTAs.
+- For top-nav anchors, place target ids on the visible label/heading/core content start and pair them with a shared sticky-header offset class rather than relying on large padded outer sections.
+- Use one sticky-header anchor offset source only: apply `--anchor-offset` via `.anchor-target` `scroll-margin-top` and keep global `html scroll-padding-top` at zero, so only actual target elements receive the sticky-header-safe spacing and offsets do not stack.
+- If anchor landing points are still hidden or too high under the sticky navbar, tune the single `.anchor-target` offset upward rather than reintroducing global `scroll-padding-top` or stacked per-section offsets; current values are 160px desktop and 136px mobile.
+- Launch-readiness cleanup resolved the placeholder/mismatched public entries by removing the Footer License link, pointing installation guide CTAs at the GitHub installation guide, removing public doctor and adapter-doc CTAs, linking the navbar logo to `#top`, and removing First Task page-side Copy Prompt controls.
+- Until real Docs/Workflow pages exist, top/footer Docs links route to a bilingual not-implemented Docs placeholder and Hero/final Workflow CTAs route to a bilingual not-implemented Workflow placeholder.
+- Default website theme should be dark on first paint; apply the root dark class before React mounts unless the user has explicitly saved `light` in local storage.
+- Keep concrete GitHub Discussions colocated in the final CTA: Welcome Discussion should target `discussions/1`, and first-task sharing should target `discussions/2`; do not split the practice-case sharing discussion into the Installation path.
+- In Installation / Quick Start, prefer lightweight trust points and a focused command card over a separate explanatory note box, while keeping the recommended command stable.
+- Present setup steps as a lighter step flow and keep bottom follow-up actions as secondary links so the install command remains the visual/action priority.
+- Treat Installation / Quick Start as a primary conversion section on desktop: give it near-viewport vertical presence and calmer, crisp command highlighting rather than glow-heavy `text-honey` treatment.
+- Keep homepage section screenshot generation as versioned generic tooling and documentation, while treating generated PNGs as local artifacts ignored by default.
