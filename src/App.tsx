@@ -10,6 +10,7 @@ import {
   FirstTask,
   HeroSection,
   HowItWorks,
+  Installation,
   OpenCodeMvp,
   OpenSourceInspiration,
   ProjectContextRoadmap,
@@ -40,6 +41,7 @@ export default function App() {
           <HeroSection content={content} />
           <StatusBar content={content} />
         </div>
+        <Installation content={content} />
         <ProductRationale content={content} />
         <WhatWorksToday content={content} />
         <HowItWorks content={content} />

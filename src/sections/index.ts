@@ -5,6 +5,7 @@ export { Faq } from './Faq';
 export { HeroSection } from './HeroSection';
 export { FirstTask } from './FirstTask';
 export { HowItWorks } from './HowItWorks';
+export { Installation } from './Installation';
 export { OpenCodeMvp } from './OpenCodeMvp';
 export { OpenSourceInspiration } from './OpenSourceInspiration';
 export { ProductHighlights } from './ProductHighlights';

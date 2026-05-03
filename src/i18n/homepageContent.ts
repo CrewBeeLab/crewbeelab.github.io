@@ -10,7 +10,7 @@ export const homepageContent = {
       roadmap: 'Roadmap',
       docs: 'Docs',
       github: 'GitHub ↗',
-      quickStart: 'Quick Start',
+      quickStart: 'Install CLI',
       toggleTheme: 'Toggle dark mode',
       toggleMenu: 'Toggle navigation menu',
       switchLanguage: '中文',
@@ -30,6 +30,24 @@ export const homepageContent = {
       floating: ['Define Team', 'Pick Leader', 'Delegate / Review']
     },
     status: ['Team-first Definitions', 'Runtime Projection', 'Harness Adapter Layer', 'Context-isolated Delegation', 'Review-backed Coding Team', 'Portable Team Assets', 'First Adapter: OpenCode'],
+    installation: {
+      badge: 'QUICK START',
+      title: 'Install CrewBee for OpenCode.',
+      subtitle: 'Set up CrewBee with one command, open your project, and start with the built-in Coding Team.',
+      note: 'No project-local node_modules. No manual OpenCode config editing. CrewBee installs into the OpenCode user-level workspace and runs doctor checks.',
+      commandLabel: 'Recommended',
+      command: 'npx crewbee@latest setup --with-opencode',
+      copy: 'Copy',
+      copied: 'Copied',
+      copyFailed: 'Copy failed',
+      steps: [
+        { title: 'Setup', desc: 'Install OpenCode if needed, install CrewBee, write the plugin entry, and run doctor.' },
+        { title: 'Open project', desc: 'Run `opencode` inside a repository you care about.' },
+        { title: 'Pick coding-leader', desc: 'Use the built-in Coding Team for a real task with review-backed completion.' }
+      ],
+      links: ['Read full installation guide', 'Run doctor checks', 'View GitHub'],
+      afterSetup: 'After setup, use the first task prompt below to try the built-in Coding Team.'
+    },
     worksToday: {
       badge: 'What works today',
       title: 'Use a structured Coding Team in OpenCode today.',
@@ -191,7 +209,7 @@ export const homepageContent = {
       roadmap: 'Roadmap',
       docs: '文档',
       github: 'GitHub ↗',
-      quickStart: '快速开始',
+      quickStart: '安装 CLI',
       toggleTheme: '切换深色模式',
       toggleMenu: '切换导航菜单',
       switchLanguage: 'EN',
@@ -211,6 +229,24 @@ export const homepageContent = {
       floating: ['定义 Team', '选择 Leader', '委派 / Review']
     },
     status: ['Team-first 定义', 'Runtime Projection', '宿主适配层', '上下文隔离式委派', '带 review 的 Coding Team', '可迁移 Team 资产', '首个适配宿主：OpenCode'],
+    installation: {
+      badge: '快速开始',
+      title: '为 OpenCode 安装 CrewBee。',
+      subtitle: '一条命令完成配置，打开你的项目，从内置 Coding Team 开始试用。',
+      note: '不安装到业务项目 node_modules，不需要手动修改 OpenCode 配置。CrewBee 会安装到 OpenCode 用户级 workspace，并运行 doctor 检查。',
+      commandLabel: '推荐命令',
+      command: 'npx crewbee@latest setup --with-opencode',
+      copy: '复制',
+      copied: '已复制',
+      copyFailed: '复制失败',
+      steps: [
+        { title: '安装并检查', desc: '需要时安装 OpenCode，安装 CrewBee，写入 plugin entry，并运行 doctor。' },
+        { title: '打开项目', desc: '在你关心的代码仓库中运行 `opencode`。' },
+        { title: '选择 coding-leader', desc: '使用内置 Coding Team 执行一个带 review-backed completion 的真实任务。' }
+      ],
+      links: ['阅读完整安装指南', '运行 doctor 检查', '查看 GitHub'],
+      afterSetup: '安装完成后，可以使用下方第一个任务提示词试用内置 Coding Team。'
+    },
     worksToday: {
       badge: '当前能做什么',
       title: '今天就可以在 OpenCode 中使用结构化 Coding Team。',
