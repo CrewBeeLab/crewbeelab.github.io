@@ -1,5 +1,5 @@
 import { AccentLabel } from '../components/AccentLabel';
-import { DEMO_URL, DISCUSSIONS_URL, GET_STARTED_URL, GITHUB_URL } from '../config/site';
+import { DEMO_URL, FIRST_TASK_DISCUSSION_URL, GET_STARTED_URL, GITHUB_URL, WELCOME_DISCUSSION_URL } from '../config/site';
 import { designSystem } from '../config/designSystem';
 import type { LocalizedSectionProps } from './types';
 
@@ -23,7 +23,8 @@ export const Acknowledgements = ({ content }: LocalizedSectionProps) => (
           <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="btn-primary bg-paper text-ink hover:bg-paper/90 sm:min-w-44 text-center">{content.acknowledgements.ctas.github}</a>
           <a href={GET_STARTED_URL} className="btn-secondary border-paper/10 bg-white/[0.04] text-paper hover:bg-white/[0.08] sm:min-w-44 text-center">{content.acknowledgements.ctas.quickStart}</a>
           <a href={DEMO_URL} className="btn-secondary border-paper/10 bg-white/[0.04] text-paper hover:bg-white/[0.08] sm:min-w-40 text-center">{content.acknowledgements.ctas.demo}</a>
-          <a href={DISCUSSIONS_URL} target="_blank" rel="noreferrer" className="btn-secondary border-paper/10 bg-white/[0.04] text-paper hover:bg-white/[0.08] sm:min-w-44 text-center">{content.acknowledgements.ctas.discussions}</a>
+          <a href={WELCOME_DISCUSSION_URL} target="_blank" rel="noreferrer" className="btn-secondary border-paper/10 bg-white/[0.04] text-paper hover:bg-white/[0.08] sm:min-w-44 text-center">{content.acknowledgements.ctas.discussions}</a>
+          <a href={FIRST_TASK_DISCUSSION_URL} target="_blank" rel="noreferrer" className="btn-secondary border-paper/10 bg-white/[0.04] text-paper hover:bg-white/[0.08] sm:min-w-44 text-center">{content.acknowledgements.ctas.firstTaskDiscussion}</a>
         </div>
       </div>
     </div>

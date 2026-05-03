@@ -1,5 +1,7 @@
 export const GITHUB_URL = 'https://github.com/CrewBeeLab/CrewBee';
 export const DISCUSSIONS_URL = `${GITHUB_URL}/discussions`;
+export const WELCOME_DISCUSSION_URL = `${GITHUB_URL}/discussions/1`;
+export const FIRST_TASK_DISCUSSION_URL = `${GITHUB_URL}/discussions/2`;
 export const INSTALLATION_GUIDE_URL = `${GITHUB_URL}/blob/main/docs/guide/installation.md`;
 export const GET_STARTED_URL = '#installation';
 export const DEMO_URL = '#not-implemented-workflow';

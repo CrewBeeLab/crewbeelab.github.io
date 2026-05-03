@@ -191,7 +191,7 @@ export const homepageContent = {
       badge: 'Final CTA',
       title: 'Ready to turn scattered agents into real teams?',
       paragraphs: ['Read the Quick Start, view the current OpenCode integration, or join Discussions to share your first Team.', 'CrewBee is a harness-adaptable Agent Team asset layer, with OpenCode as the first supported host.'],
-      ctas: { github: 'View GitHub', quickStart: 'Read Quick Start', demo: 'View Workflow', discussions: 'Join Discussions' }
+      ctas: { github: 'View GitHub', quickStart: 'Read Quick Start', demo: 'View Workflow', discussions: 'Join Welcome Discussion', firstTaskDiscussion: 'Share your first task' }
     },
     notImplemented: {
       docs: {
@@ -401,7 +401,7 @@ export const homepageContent = {
       badge: '最终 CTA',
       title: '准备把分散的智能体变成真正的团队？',
       paragraphs: ['阅读快速开始，查看当前 OpenCode 集成，或者加入 Discussions 展示你的第一支 Team。', 'CrewBee 是一个可适配不同 Agent Harness 的 Agent Team 资产层，当前首个支持宿主是 OpenCode。'],
-      ctas: { github: '查看 GitHub', quickStart: '阅读快速开始', demo: '查看工作流', discussions: '加入 Discussions' }
+      ctas: { github: '查看 GitHub', quickStart: '阅读快速开始', demo: '查看工作流', discussions: '加入欢迎讨论', firstTaskDiscussion: '分享首次实践' }
     },
     notImplemented: {
       docs: {
