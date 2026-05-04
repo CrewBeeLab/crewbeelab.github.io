@@ -21,7 +21,7 @@ export const FirstTask = ({ content }: LocalizedSectionProps) => {
         <div className="card-paper bg-ink text-paper p-6 md:p-8 lg:p-10 relative overflow-hidden self-center">
           <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-honey/15 blur-[70px]" />
           <div className="relative z-10 mb-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-honey">Prompt Card</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-honey">{content.firstTask.promptCardLabel}</span>
             <div className="flex flex-wrap items-center gap-3">
               <a href={GET_STARTED_URL} className="text-[10px] font-bold uppercase tracking-[0.18em] text-paper/55 transition-colors hover:text-honey">{content.firstTask.quickStartFirst}</a>
             </div>

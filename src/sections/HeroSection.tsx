@@ -36,7 +36,7 @@ export const HeroSection = ({ content }: LocalizedSectionProps) => (
           <div className="absolute inset-0 bg-honey/10 blur-[60px] md:blur-[80px] rounded-full" />
           <div className="absolute inset-8 rounded-full border border-honey/15" />
           <div className="absolute inset-14 rounded-full border border-ink/8" />
-          <BeeIcon className="w-40 h-40 md:w-56 md:h-56 text-ink relative z-20" />
+          <BeeIcon alt={content.nav.brand} className="w-40 h-40 md:w-56 md:h-56 text-ink relative z-20" />
           <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 4, repeat: Infinity }} className="absolute -top-4 sm:top-10 -left-4 sm:left-0 bg-paper/82 backdrop-blur-md border border-honey/15 p-2 sm:p-3 shadow-xl z-30 min-w-36 text-center">
             <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-[0.2em] whitespace-nowrap">{content.hero.floating[0]}</span>
           </motion.div>

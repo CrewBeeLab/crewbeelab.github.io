@@ -46,3 +46,7 @@
 - Present setup steps as a lighter step flow and keep bottom follow-up actions as secondary links so the install command remains the visual/action priority.
 - Treat Installation / Quick Start as a primary conversion section on desktop: give it near-viewport vertical presence and calmer, crisp command highlighting rather than glow-heavy `text-honey` treatment.
 - Keep homepage section screenshot generation as versioned generic tooling and documentation, while treating generated PNGs as local artifacts ignored by default.
+- Keep local/private working artifacts under `.local/` ignored from git.
+- Treat external homepage content JSON assets as the primary maintainable source for bilingual website wording; keep the TypeScript homepage content module as a loader/type boundary and avoid reintroducing visible hardcoded component copy where content can be represented in the assets.
+- Avoid marketing-`copy` terminology in content maintenance docs and asset names; the earlier combined `homepage-content.json` boundary has since been superseded by the per-locale content split.
+- Split external homepage wording into per-locale assets (`homepage-content.en.json` and `homepage-content.zh.json`) while keeping `src/i18n/homepageContent.ts` as the stable loader/type boundary that reassembles the existing `{ en, zh }` shape for components.
