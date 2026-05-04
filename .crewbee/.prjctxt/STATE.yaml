@@ -6,8 +6,9 @@ last_checkpoint: CP-0013
 blockers: []
 next_actions:
   - action: >-
-      Review and commit the latest homepage content assetization/naming/split work when ready;
-      it is currently reported as uncommitted working-tree work.
+      Review and commit the latest homepage content assetization/naming/split plus v2.2.2
+      content-asset wording pass when ready; it is currently reported as uncommitted
+      working-tree work.
     owner: active-agent
     source: latest-session
   - action: >-

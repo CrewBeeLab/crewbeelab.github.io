@@ -34,6 +34,7 @@
 - Latest homepage copy assetization moves bilingual homepage wording out to an external JSON content asset with a content README, changes the homepage content module to import that JSON, enables JSON module resolution in TypeScript, and routes remaining visible brand/label strings in Navbar, Footer, Hero, First Task, Team Templates, and BeeIcon alt text through centralized content.
 - Latest naming follow-up renames the external homepage content asset from `homepage-copy.json` to `homepage-content.json`, updates the `homepageContent` loader import, and revises content maintenance wording to avoid the marketing `copy` label while preserving the same centralized-content architecture.
 - Latest content-asset split replaces the combined external homepage content JSON with separate `homepage-content.en.json` and `homepage-content.zh.json` files; `homepageContent.ts` now imports both locale files and reassembles the same `{ en, zh }` module shape, so existing component interfaces remain unchanged while per-locale wording maintenance is clearer.
+- Latest v2.2.2 content-asset wording pass updates only the English and Chinese homepage content JSON assets, preserving existing layout/component structure while sharpening CrewBee positioning as harness-adaptable Agent Team assets, OpenCode as the first/current adapter, Project Context as next-stage/roadmap, and the simple-task vs complex-task execution split across Hero, rationale/current-capability, workflow, Coding Team, Product Highlights, Team Templates, Quick Start, Roadmap, and CTA surfaces.
 
 ## Verification Commands
 
@@ -69,10 +70,11 @@
 - Latest homepage copy assetization: parent session reported `npm test --if-present` passed with no test script output, `npm run lint` passed, `npm run build` passed, and independent review found no blocking issue. Earlier command-quoting attempts while generating the JSON were superseded by the successful final state.
 - Latest homepage content asset rename: parent session reported `npm test --if-present` passed, `npm run lint` passed, `npm run build` passed, and grep checks found no `homepage-copy` / `homepageCopy` / `copy.json` residue.
 - Latest per-locale homepage content split: parent session reported `npm test --if-present` passed, `npm run lint` passed after rerun, `npm run build` passed, and checks found no `homepage-content.json` / `homepage-copy` / `homepage-context` residue in `src/` or `content/`.
+- Latest v2.2.2 content-asset wording pass: parent session reported `npm test --if-present` passed, `npm run lint` passed, `npm run build` passed generating `/`, `/en/`, and `/zh/`, and independent review found no blocker; browser preview/screenshots were not run because the pass changed content assets only.
 
 ## Current Worktree Notes
 
-- Latest committed baseline remains the approved website refresh and section-render tooling on `main` as `fd28a7e Add section render tooling and assets`; the newer homepage content assetization, asset-name cleanup, and per-locale split were reported complete but uncommitted.
+- Latest committed baseline remains the approved website refresh and section-render tooling on `main` as `fd28a7e Add section render tooling and assets`; the newer homepage content assetization, asset-name cleanup, per-locale split, and latest v2.2.2 content-asset wording pass were reported complete but uncommitted.
 - Remaining launch caveat: Docs/Workflow are intentionally placeholder pages until real destinations are implemented.
 - `.local/` is now ignored for local/private artifacts.
 - Homepage wording maintenance should now use the per-locale content assets (`content/homepage-content.en.json` for English and `content/homepage-content.zh.json` for Chinese) rather than editing visible wording inside React components.
