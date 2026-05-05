@@ -20,11 +20,11 @@
     "titlePrefix": "把分散的智能体变成",
     "titleHighlight": "真正的团队。",
     "description": "CrewBee 把研发工作中的 prompts、agents、规则、review 流程和验收标准，整理成可维护的 Agent Team 资产。",
-    "supporting": "为专项业务场景定制可复用 Agent Team：Agent、tools / skills 策略、工作流、规则、review 和验收标准，都可以沉淀为工程资产。当前从 OpenCode 起步。",
+    "supporting": "为专项业务场景定制可复用 Agent Team：Agent、tools / skills 策略、工作流、规则、review 和验收标准，都可以沉淀为工程资产。当前优先适配 OpenCode，后续将探索更多 Agent Harness。",
     "boundaries": [
       "Agent Team 资产层。",
       "专项业务场景可复用 Team。",
-      "内置 Coding Team，当前从 OpenCode 起步。"
+      "内置 Coding Team，当前优先适配 OpenCode。"
     ],
     "viewGithub": "在 GitHub 上查看",
     "watchDemo": "查看工作流",
@@ -56,7 +56,7 @@
     "Leader / Executor 路径",
     "支援 Agent 独立探索",
     "Review 与验收标准",
-    "当前从 OpenCode 起步"
+    "当前优先适配 OpenCode"
   ],
   "installation": {
     "badge": "快速开始",
@@ -95,7 +95,7 @@
   },
   "worksToday": {
     "badge": "当前可用",
-    "title": "当前可用：从 OpenCode 中的 Coding Team 开始。",
+    "title": "当前可用：在 OpenCode 中使用 Coding Team。",
     "subtitle": "CrewBee 当前已经提供 Agent Team 资产层、内置 Coding Team、delegation tooling、user-level setup 和 doctor checks，可以直接在 OpenCode 项目中试用。",
     "cards": [
       {
@@ -117,8 +117,8 @@
     ]
   },
   "features": {
-    "title": "从分散配置，到可维护的 Agent Team。",
-    "subtitle": "CrewBee 关注 Agent 工作方式的可维护性：把 Team 资产、业务场景规则、tools / skills 策略、review 流程和验收标准沉淀下来。",
+    "title": "把分散的 Agent 配置整理成可维护的 Team 资产。",
+    "subtitle": "CrewBee 关注的不是配置数量，而是 Agent 工作方式能否被复用、审查和维护：Team 资产、业务规则、tools / skills 策略、review 流程和验收标准，都应沉淀下来。",
     "cards": [
       {
         "title": "为专项业务场景定制 Agent Team",
@@ -140,9 +140,9 @@
   },
   "why": {
     "titleBeforeBreak": "复杂研发任务，",
-    "titleAfterBreak": "不只是代码生成。",
+    "titleAfterBreak": "需要可审查、可验证的工作结构。",
     "paragraphs": [
-      "AI 可以快速生成代码，但研发交付还需要需求理解、代码定位、方案判断、实现变更、独立审查、验证确认和交付说明。",
+      "代码生成只是其中一环。真正影响交付质量的，是需求理解、代码定位、方案判断、实现变更、独立审查、验证确认和交付说明。",
       "如果这些内容分散在 prompts、agents、rules 和临时约定中，Agent 工作流会越来越难维护。CrewBee 把这些工作方式整理成可维护的 Agent Team 资产。"
     ],
     "emphasis": "价值不是更多 Agent，而是把复杂研发任务需要的职责、规则、review 和验收标准整理成可复用的 Team 资产。",
@@ -175,7 +175,7 @@
       },
       {
         "step": "接入 OpenCode",
-        "desc": "当前从 OpenCode 起步，让 Team 资产成为可选择、可运行的 Agent 工作方式。"
+        "desc": "OpenCode 是当前首个正式适配宿主，让 Team 资产成为可选择、可运行的 Agent 工作方式。"
       },
       {
         "step": "选择 Leader 或 Executor",
@@ -411,7 +411,7 @@
       },
       {
         "q": "CrewBee 当前支持哪个宿主？",
-        "a": "当前从 OpenCode 起步。更多 Agent Harness 适配属于后续 Roadmap。"
+        "a": "当前优先适配 OpenCode。更多 Agent Harness 适配属于后续 Roadmap。"
       },
       {
         "q": "CrewBee 适合非 coding 任务吗？",
@@ -428,7 +428,7 @@
     "title": "准备把分散的智能体变成真正的团队？",
     "paragraphs": [
       "阅读快速开始，查看当前 OpenCode 集成，或者加入 Discussions 展示你的第一支 Team。",
-      "CrewBee 是 Agent Team 资产层：为专项业务场景沉淀可复用 Team，内置 Coding Team 当前从 OpenCode 起步。"
+      "CrewBee 是 Agent Team 资产层：为专项业务场景沉淀可复用 Team，内置 Coding Team 当前优先适配 OpenCode。"
     ],
     "ctas": {
       "github": "查看 GitHub",
