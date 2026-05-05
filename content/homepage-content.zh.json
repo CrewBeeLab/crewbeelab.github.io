@@ -1,12 +1,12 @@
 {
   "siteTitle": "CrewBee | 把分散的智能体变成真正的团队",
-  "siteDescription": "CrewBee 把分散在 prompts、agents、规则、review 流程和验收标准中的工作方式，整理成可维护的 Agent Team 资产，并投影到你使用的 Agent Harness 中运行。",
+  "siteDescription": "CrewBee 把研发工作中的 prompts、agents、规则、review 流程和验收标准，整理成可维护的 Agent Team 资产。",
   "nav": {
     "brand": "CrewBee",
     "why": "为什么需要",
     "coding": "Coding Team",
     "how": "工作方式",
-    "templates": "Team 模板",
+    "templates": "Team 资产",
     "roadmap": "Roadmap",
     "docs": "文档",
     "github": "GitHub ↗",
@@ -19,12 +19,12 @@
   "hero": {
     "titlePrefix": "把分散的智能体变成",
     "titleHighlight": "真正的团队。",
-    "description": "CrewBee 把分散在 prompts、agents、规则、review 流程和验收标准中的工作方式，整理成可维护的 Agent Team 资产，并投影到你使用的 Agent Harness 中运行。",
-    "supporting": "定义 Team，选择 Leader，运行结构化 Agent 工作流。简单任务保持轻量，复杂任务再启用支援、review 和验收标准。",
+    "description": "CrewBee 把研发工作中的 prompts、agents、规则、review 流程和验收标准，整理成可维护的 Agent Team 资产。",
+    "supporting": "为专项业务场景定制可复用 Agent Team：Agent、tools / skills 策略、工作流、规则、review 和验收标准，都可以沉淀为工程资产。当前从 OpenCode 起步。",
     "boundaries": [
       "Agent Team 资产层。",
-      "面向多宿主投影设计。",
-      "当前首个适配宿主：OpenCode。"
+      "专项业务场景可复用 Team。",
+      "内置 Coding Team，当前从 OpenCode 起步。"
     ],
     "viewGithub": "在 GitHub 上查看",
     "watchDemo": "查看工作流",
@@ -50,13 +50,13 @@
     ]
   },
   "status": [
-    "Team-first 定义",
-    "Runtime Projection",
-    "宿主适配层",
-    "上下文隔离式委派",
-    "带 review 的 Coding Team",
-    "可迁移 Team 资产",
-    "首个适配宿主：OpenCode"
+    "Agent Team 资产层",
+    "专项业务场景 Team",
+    "内置 Coding Team",
+    "Leader / Executor 路径",
+    "支援 Agent 独立探索",
+    "Review 与验收标准",
+    "当前从 OpenCode 起步"
   ],
   "installation": {
     "badge": "快速开始",
@@ -94,58 +94,58 @@
     "afterSetup": "安装完成后，选择 `coding-leader`，用一个真实问题试用 owner、support、review 和 completion gate。"
   },
   "worksToday": {
-    "badge": "当前能做什么",
-    "title": "今天就可以在 OpenCode 中使用结构化 Coding Team。",
-    "subtitle": "CrewBee 当前已经提供 Team 资产层、OpenCode adapter、delegation tools 和内置 Coding Team，可以直接在真实仓库中运行。",
+    "badge": "当前可用",
+    "title": "当前可用：从 OpenCode 中的 Coding Team 开始。",
+    "subtitle": "CrewBee 当前已经提供 Agent Team 资产层、内置 Coding Team、delegation tooling、user-level setup 和 doctor checks，可以直接在 OpenCode 项目中试用。",
     "cards": [
       {
-        "title": "OpenCode adapter",
-        "desc": "把 CrewBee Team 定义投影成 OpenCode 中可选择的 Agent，并支持 session binding 与插件运行时。"
+        "title": "Agent Team 资产",
+        "desc": "将 Team mission、Leader、members、shared policy、workflow、review flow 和 completion criteria 组织成可维护文件。"
       },
       {
         "title": "内置 Coding Team",
         "desc": "从 coding-leader 开始，按需使用 codebase-explorer、coding-executor、web-researcher、principal-advisor 和 reviewer。"
       },
       {
-        "title": "Leader 或 Executor 入口",
-        "desc": "需要 owner、支援 Agent、review 和最终收口时，选择 Leader；清晰、局部、单 Agent 可完成的任务，选择 Executor。"
+        "title": "OpenCode 中运行",
+        "desc": "当前优先支持 OpenCode。CrewBee 将 Team 资产接入 OpenCode，使内置 Coding Team 可以在真实仓库中使用。"
       },
       {
-        "title": "带 review 的收口",
-        "desc": "非琐碎任务用 diagnostics、build、tests、风险说明和必要的独立 review 完成闭环。"
+        "title": "安装与诊断",
+        "desc": "提供 user-level setup、update 和 doctor checks，降低安装、升级和排障成本。"
       }
     ]
   },
   "features": {
     "title": "从分散配置，到可维护的 Agent Team。",
-    "subtitle": "CrewBee 关注让 Agent 工作可迁移、可维护的核心结构：Team 资产、执行强度、决策上下文和上下文隔离式委派。",
+    "subtitle": "CrewBee 关注 Agent 工作方式的可维护性：把 Team 资产、业务场景规则、tools / skills 策略、review 流程和验收标准沉淀下来。",
     "cards": [
       {
-        "title": "为不同任务 / 项目设计不同 Agent Team",
-        "desc": "不同任务需要不同角色分工、规则、流程和完成标准。不要用一套越来越长的 prompt 通吃所有工作。"
+        "title": "为专项业务场景定制 Agent Team",
+        "desc": "不只是 agents，还包括 tools / skills 策略、工作流、共享规则、review 流程和验收标准。把某类工作的方法沉淀成可复用 Team。"
       },
       {
-        "title": "简单任务保持快速，复杂任务获得支援",
-        "desc": "CrewBee 不把多 Agent 协作做成默认仪式。简单任务保持单 Agent 快速执行，复杂任务再启用支援 Agent、review、验证和完成闸门。"
+        "title": "简单任务保持轻量，复杂任务获得支援",
+        "desc": "CrewBee 不把多 Agent 协作做成默认仪式。简单任务保持单 Agent 快速执行；复杂任务再启用支援 Agent、review、验证和完成标准。"
       },
       {
-        "title": "主 Agent 持有最完整的决策上下文",
-        "desc": "主 Agent 汇总用户目标、项目约束、支援结论、review 意见、验证结果和风险，用于关键判断与最终收口。支援 Agent 可以探索、调研和 review，但最终判断要回到主 Agent 手里。"
+        "title": "Leader 持有决策上下文",
+        "desc": "Leader 汇总用户目标、项目约束、支援结论、review 意见、验证结果和风险，负责关键判断与交付说明。"
       },
       {
         "title": "上下文隔离式委派",
-        "desc": "支援 Agent 在独立上下文中完成专项任务，只把高信号结论回传给主 Agent。不要把搜索过程和低价值材料都倒回主上下文。"
+        "desc": "支援 Agent 在独立上下文中完成代码定位、资料研究或 review，只把结论、证据、风险和建议回传给 Leader，避免支线过程污染主上下文。"
       }
     ]
   },
   "why": {
-    "titleBeforeBreak": "问题不是 Agent 不够多，",
-    "titleAfterBreak": "而是没有 Team 结构。",
+    "titleBeforeBreak": "复杂研发任务，",
+    "titleAfterBreak": "不只是代码生成。",
     "paragraphs": [
-      "Prompts 被复制到不同地方，roles 被平铺成越来越长的列表，rules 在不同项目里逐渐不一致，review 和验收标准难以沉淀。",
-      "每个项目都会慢慢长出一套隐形工作流。CrewBee 把这些隐含工作流整理成显式、结构化、可运行的 Agent Team。"
+      "AI 可以快速生成代码，但研发交付还需要需求理解、代码定位、方案判断、实现变更、独立审查、验证确认和交付说明。",
+      "如果这些内容分散在 prompts、agents、rules 和临时约定中，Agent 工作流会越来越难维护。CrewBee 把这些工作方式整理成可维护的 Agent Team 资产。"
     ],
-    "emphasis": "价值不是更多 Agent，而是把 Agent 工作方式整理成可维护的 Team 资产。",
+    "emphasis": "价值不是更多 Agent，而是把复杂研发任务需要的职责、规则、review 和验收标准整理成可复用的 Team 资产。",
     "beforeAfter": {
       "beforeTitle": "使用 CrewBee 之前",
       "afterTitle": "使用 CrewBee 之后",
@@ -153,43 +153,45 @@
         "Prompt 到处复制",
         "Agent 只是平铺列表",
         "规则散落在不同项目",
-        "Review 依赖记忆和习惯"
+        "Review 依赖临时提醒",
+        "验收标准难以复用"
       ],
       "after": [
         "Team 资产落在文件里",
-        "明确 Leader 与成员",
-        "共享规则与工作流",
-        "Completion gate 与 review 可复用"
+        "明确 Leader、成员和职责",
+        "共享规则与工作流可维护",
+        "Review 流程和验收标准可复用",
+        "简单任务轻量执行，复杂任务启用支援"
       ]
     }
   },
   "how": {
     "title": "CrewBee 如何工作",
-    "subtitle": "把 Team 定义成资产，投影到你使用的宿主，选择 Leader 或 Executor，并运行与任务复杂度匹配的工作流。",
+    "subtitle": "把 Team 定义成资产，在 OpenCode 中选择 Leader 或 Executor，并根据任务复杂度运行匹配的工作流。",
     "steps": [
       {
         "step": "定义 Team",
-        "desc": "定义 Team 的任务定位、Leader、成员、共享规则、工作流程、工具边界、review 方式和完成标准。"
+        "desc": "定义 Team 的任务定位、Leader、成员、共享规则、工作流、tools / skills 策略、review 方式和完成标准。"
       },
       {
-        "step": "投影到宿主",
-        "desc": "CrewBee 将 Team 定义投影到目标 Agent Harness 中，成为可选择、可运行的 Agent。当前首个适配宿主是 OpenCode。"
+        "step": "接入 OpenCode",
+        "desc": "当前从 OpenCode 起步，让 Team 资产成为可选择、可运行的 Agent 工作方式。"
       },
       {
         "step": "选择 Leader 或 Executor",
-        "desc": "当任务需要 owner、支援 Agent、review 和最终收口时，选择 Leader；当任务足够清晰、适合单 Agent 直接执行时，选择 Executor。"
+        "desc": "复杂任务选择 Leader，由 Leader 持有主线、按需委派、汇总 review 和验证结果；清晰、局部、低风险任务可以选择 Executor 直接执行。"
       },
       {
         "step": "运行匹配的工作流",
-        "desc": "Leader 和 Executor 走不同执行路径。",
+        "desc": "简单任务保持轻量路径；复杂任务再启用代码定位、专项实现、独立 review、验证确认和交付说明。",
         "modes": [
           {
             "label": "Leader",
-            "desc": "委派支援 Agent、汇总结论，并用 review-backed completion 收口。"
+            "desc": "负责需求理解、任务主线、支援委派、review 汇总、最终判断与交付说明。"
           },
           {
             "label": "Executor",
-            "desc": "作为单 Agent 路径直接执行，不进行委派。"
+            "desc": "适合目标明确、范围清晰的局部实现、修复和调试任务，不主动承担复杂任务主线。"
           }
         ]
       }
@@ -199,13 +201,13 @@
     "badge": "Team 资产",
     "title": "Team 是工程资产。可以复制、修改，也可以贡献。",
     "paragraphs": [
-      "CrewBee Team 不是一个 prompt 文件，而是一套结构化 Team package：包含任务定位、Leader、成员、共享规则、工作流程、review 标准和面向人的说明文档。",
-      "你可以从内置 Coding Team 开始，复制一个模板，调整角色分工、共享规则、review 方式和完成标准，把自己的 Agent 工作方式沉淀成可复用的 Team。"
+      "CrewBee Team 不是一个 prompt 文件，而是一套结构化 Team package：包含任务定位、Leader、成员、共享规则、工作流、tools / skills 策略、review 标准和面向人的说明文档。",
+      "你可以从内置 Coding Team 开始，复制一个模板，调整角色分工、共享规则、tools / skills 策略、review 方式和完成标准，把自己的工作方式沉淀成可复用 Team。"
     ],
     "files": [
       {
         "name": "team.manifest.yaml",
-        "desc": "Team id、任务定位、Leader、成员和 workflow。"
+        "desc": "Team id、任务定位、Leader、成员、workflow、tools / skills 策略。"
       },
       {
         "name": "team.policy.yaml",
@@ -213,7 +215,7 @@
       },
       {
         "name": "coding-leader.agent.md",
-        "desc": "主 Agent、owner、决策上下文和最终收口。"
+        "desc": "主 Agent、owner、决策上下文和交付说明。"
       },
       {
         "name": "codebase-explorer.agent.md",
@@ -240,12 +242,12 @@
   },
   "codingTeam": {
     "badge": "Coding Team",
-    "title": "内置 Coding Team。以主线 owner 为中心，以独立 review 做质量刹车。",
-    "subtitle": "CrewBee 内置 Coding Team，面向开发、bug 修复、重构、调试和验证。Leader 保持任务所有权，支援 Agent 负责代码探索、明确实现、外部资料和风险 review。",
+    "title": "内置 Coding Team。以主线 owner 为中心，以独立 review 作为质量门禁。",
+    "subtitle": "CrewBee 内置 Coding Team，面向代码开发、bug 修复、重构、调试和验证。Leader 持有任务主线，支援 Agent 负责代码定位、专项实现、外部资料和独立 review。",
     "roles": [
       {
         "name": "coding-leader",
-        "desc": "默认入口、任务 owner、决策上下文持有者、最终收口者。"
+        "desc": "默认入口、任务 owner、决策上下文持有者、最终判断与交付说明负责人。"
       },
       {
         "name": "codebase-explorer",
@@ -257,7 +259,7 @@
       },
       {
         "name": "web-researcher",
-        "desc": "查官方资料、外部文档、开源实现和版本差异。"
+        "desc": "查官方文档、外部资料、开源实现和版本差异。"
       },
       {
         "name": "reviewer",
@@ -270,7 +272,7 @@
       "修改点有明确依据",
       "已完成必要实现或修复",
       "已运行可用的 diagnostics / build / tests",
-      "当风险或范围需要时使用独立 review",
+      "复杂或高风险任务已经过独立 review",
       "已说明未验证项和残余风险"
     ]
   },
@@ -289,32 +291,32 @@
   },
   "projectContext": {
     "badge": "下一步",
-    "title": "下一步：Project Context，以及更多宿主适配。",
-    "subtitle": "Roadmap 会保持在当前 Team 资产层之后：增强长期项目上下文，并逐步探索更多 Agent Harness 适配器。",
+    "title": "下一步：Project Context、Team 模板生态与更多宿主适配。",
+    "subtitle": "Roadmap 会保持在当前 Team 资产层之后：先增强长期项目上下文，再逐步探索 Team 模板生态和更多 Agent Harness 适配。",
     "cards": [
       {
-        "title": "面向长期、跨会话工作的 Project Context",
-        "desc": "CrewBee 下一阶段将增强 Project Context，让长期 Agent 工作持续保有项目定位、框架设计、历史记录、当前状态、已知风险和下一步行动。不要让长期项目里的 Agent 每次都像新人入职。"
+        "title": "Project Context",
+        "desc": "让长期项目中的 Agent 不再每次像新人入职，持续保留项目定位、架构摘要、历史决策、当前状态和下一步计划。"
       },
       {
-        "title": "恢复项目状态",
-        "desc": "新会话开始时，快速恢复项目定位、架构摘要、历史决策、当前状态和下一步行动。"
+        "title": "Team 模板生态",
+        "desc": "当前 CrewBee 支持定义可复用业务场景 Team；下一阶段将逐步沉淀更多官方模板、社区模板、showcase 或 registry。"
       },
       {
-        "title": "启发式阅读代码",
-        "desc": "把 Project Context 作为启发式入口，先定位相关模块，再有针对性地阅读代码，减少全仓扫描带来的上下文消耗。"
+        "title": "启发式项目上下文",
+        "desc": "将 Project Context 作为启动入口，先定位相关模块，再有针对性地阅读代码，减少重复扫描带来的上下文消耗。"
       },
       {
-        "title": "更多 Agent Harness 适配器",
-        "desc": "OpenCode 是当前首个适配宿主。后续可继续探索 Codex、Claude Code 或其他 Agent Harness 的适配。"
+        "title": "更多 Agent Harness 适配",
+        "desc": "OpenCode 是当前首个适配宿主。后续会探索 Codex、Claude Code 或其他 Agent Harness 的适配与差异化投影。"
       }
     ],
     "flowTitle": "规划中的 Project Context Loop",
     "flow": [
-      "会话开始 → 读取 Project Context，恢复项目定位、框架和当前计划",
-      "任务执行 → 用摘要指导代码阅读和决策",
-      "会话结束 → 更新状态、风险、决策和下一步行动",
-      "下一次会话 → 基于最新上下文继续推进"
+      "会话开始：读取 Project Context，恢复项目定位、架构摘要、历史决策和当前计划。",
+      "任务执行：用摘要引导代码阅读和决策，减少重复全仓扫描。",
+      "会话结束：更新状态、风险、决策和下一步行动。",
+      "下一次会话：基于最新上下文继续推进。"
     ]
   },
   "builders": {
@@ -323,11 +325,11 @@
     "cards": [
       {
         "role": "Agent harness users",
-        "desc": "你正在使用 Coding Agent 或 Agent Harness，但 prompts、agents 和规则越来越分散，难以维护。"
+        "desc": "你正在使用 Coding Agent 或 Agent Harness，但 prompts、agents、rules 和 review 清单越来越分散，难以维护。"
       },
       {
         "role": "OpenCode users today",
-        "desc": "你当前使用 OpenCode，并希望拥有一层结构化 Team：包含 Leader、成员、review 和委派协作。"
+        "desc": "你当前使用 OpenCode，并希望拥有一层结构化 Team：包含 Leader、成员、共享规则、review 和委派协作。"
       },
       {
         "role": "Prompt / subagent 维护者",
@@ -335,11 +337,11 @@
       },
       {
         "role": "AI coding 用户",
-        "desc": "你希望简单代码任务保持轻量，复杂任务具备代码探索、独立 review 和验收标准。"
+        "desc": "你希望简单代码任务保持轻量，复杂任务具备代码定位、独立 review、验证确认和交付说明。"
       },
       {
         "role": "DevTools / AI workflow 构建者",
-        "desc": "你正在构建 AI coding 或 Agent workflow 工具，希望研究 Team definition / projection layer。"
+        "desc": "你正在构建 AI coding 或 Agent workflow 工具，希望研究 Agent Team 资产层、业务场景 Team 和工作流定义方式。"
       }
     ]
   },
@@ -352,7 +354,7 @@
     "proofs": [
       "✓ Team / Agent 定义",
       "✓ Team Library 装配与校验",
-      "✓ Runtime Projection",
+      "✓ Team 资产接入",
       "✓ Formal Leader 默认入口选择",
       "✓ Agent 配置投影",
       "✓ Session Binding",
@@ -377,7 +379,7 @@
     "items": [
       {
         "q": "CrewBee 是 prompt pack 吗？",
-        "a": "不是。CrewBee 会使用 prompt，但核心不是 prompt 文本本身，而是 Team 定义、Agent Profile、Runtime Projection、session binding 和 delegation tooling。它把 Agent 工作方式整理成可维护、可运行的 Team 工程资产。"
+        "a": "不是。CrewBee 会使用 prompt，但核心不是 prompt 文本本身，而是 Team 定义、Agent Profile、session binding、delegation tooling、review 流程和验收标准。它把 Agent 工作方式整理成可维护、可运行的 Team 工程资产。"
       },
       {
         "q": "CrewBee 是 flat agent list 吗？",
@@ -389,7 +391,7 @@
       },
       {
         "q": "CrewBee 会让所有任务都变成多 Agent 协作吗？",
-        "a": "不会。CrewBee 的目标是根据任务复杂度选择合适的执行方式。简单任务可以保持单 Agent 快速执行；复杂任务才启用支援 Agent、review、验证和完成闸门。"
+        "a": "不会。CrewBee 不把多 Agent 协作做成默认仪式。简单任务保持轻量；复杂任务才启用代码定位、专项实现、独立 review、验证确认和交付说明。"
       },
       {
         "q": "为什么需要主 Agent / Leader？",
@@ -405,11 +407,11 @@
       },
       {
         "q": "Project Context 已经完整实现了吗？",
-        "a": "Project Context 是 CrewBee 下一阶段重点增强方向。目标是跨会话维护项目定位、框架设计、历史记录、当前状态、已知风险和下一步计划等摘要信息，减少重复解释和重复读代码。官网中把它标为 Roadmap / 下一阶段，而不是当前完整成熟能力。"
+        "a": "还没有。Project Context 是 Roadmap / 下一阶段方向，目标是让长期项目中的 Agent 不再每次像新人入职，而不是当前已经完整成熟的能力。"
       },
       {
         "q": "CrewBee 当前支持哪个宿主？",
-        "a": "当前首先支持 OpenCode。更多宿主适配属于后续 Roadmap。"
+        "a": "当前从 OpenCode 起步。更多 Agent Harness 适配属于后续 Roadmap。"
       },
       {
         "q": "CrewBee 适合非 coding 任务吗？",
@@ -426,7 +428,7 @@
     "title": "准备把分散的智能体变成真正的团队？",
     "paragraphs": [
       "阅读快速开始，查看当前 OpenCode 集成，或者加入 Discussions 展示你的第一支 Team。",
-      "CrewBee 是 Agent Team 资产层，当前首个适配宿主是 OpenCode。简单任务保持轻量，复杂任务再组队。"
+      "CrewBee 是 Agent Team 资产层：为专项业务场景沉淀可复用 Team，内置 Coding Team 当前从 OpenCode 起步。"
     ],
     "ctas": {
       "github": "查看 GitHub",

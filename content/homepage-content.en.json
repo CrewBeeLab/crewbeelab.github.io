@@ -1,12 +1,12 @@
 {
   "siteTitle": "CrewBee | Turn scattered agents into real teams",
-  "siteDescription": "CrewBee turns scattered prompts, agents, rules, review flows, and completion criteria into maintainable Agent Team assets, then projects them into the Agent Harness you use.",
+  "siteDescription": "CrewBee turns prompts, agents, rules, review flows, and completion criteria into maintainable Agent Team assets.",
   "nav": {
     "brand": "CrewBee",
     "why": "Why",
     "coding": "Coding Team",
     "how": "How It Works",
-    "templates": "Templates",
+    "templates": "Team Assets",
     "roadmap": "Roadmap",
     "docs": "Docs",
     "github": "GitHub ↗",
@@ -19,12 +19,12 @@
   "hero": {
     "titlePrefix": "Turn scattered agents into",
     "titleHighlight": "real teams.",
-    "description": "CrewBee turns scattered prompts, agents, rules, review flows, and completion criteria into maintainable Agent Team assets, then projects them into the Agent Harness you use.",
-    "supporting": "Define Teams, pick a Leader, and run structured agent workflows. Simple tasks stay lightweight; complex tasks get support, review, and completion criteria.",
+    "description": "CrewBee turns prompts, agents, rules, review flows, and completion criteria into maintainable Agent Team assets.",
+    "supporting": "Engineer reusable Agent Teams for domain-specific workflows: agents, tools, skills, rules, review flows, and completion criteria.",
     "boundaries": [
       "Agent Team asset layer.",
-      "Designed for multi-host projection.",
-      "Current first supported host: OpenCode."
+      "Reusable Teams for domain-specific workflows.",
+      "Built-in Coding Team, starting with OpenCode today."
     ],
     "viewGithub": "View on GitHub",
     "watchDemo": "See Workflow",
@@ -45,18 +45,18 @@
     ],
     "floating": [
       "Define Team",
-      "Pick Leader",
-      "Delegate / Review"
+      "Run Workflow",
+      "Review / Validate"
     ]
   },
   "status": [
-    "Team-first Definitions",
-    "Runtime Projection",
-    "Harness Adapter Layer",
-    "Context-isolated Delegation",
-    "Review-backed Coding Team",
-    "Portable Team Assets",
-    "First Adapter: OpenCode"
+    "Agent Team Assets",
+    "Domain-specific Teams",
+    "Built-in Coding Team",
+    "Review-backed Delivery",
+    "Starts with OpenCode",
+    "Roadmap: Project Context",
+    "Roadmap: More Hosts"
   ],
   "installation": {
     "badge": "QUICK START",
@@ -84,7 +84,7 @@
       },
       {
         "title": "Pick coding-leader",
-        "desc": "Ask CrewBee to fix a real issue with independent review and completion criteria before closure."
+        "desc": "Ask CrewBee to fix a real issue with independent review and completion criteria before final delivery."
       }
     ],
     "links": [
@@ -95,101 +95,103 @@
   },
   "worksToday": {
     "badge": "What works today",
-    "title": "Use a structured Coding Team in OpenCode today.",
-    "subtitle": "CrewBee already provides the Team asset layer, OpenCode adapter, delegation tools, and built-in Coding Team for real repositories.",
+    "title": "Start with the Coding Team in OpenCode today.",
+    "subtitle": "CrewBee already provides the Agent Team asset layer, built-in Coding Team, delegation tooling, user-level setup, and doctor checks for real OpenCode projects.",
     "cards": [
       {
-        "title": "OpenCode adapter",
-        "desc": "Projects CrewBee Team definitions into selectable OpenCode agents with session binding and plugin runtime support."
+        "title": "Agent Team assets",
+        "desc": "Organize Team mission, Leader, members, shared policy, workflow, review flow, and completion criteria as maintainable files."
       },
       {
         "title": "Built-in Coding Team",
-        "desc": "Start from coding-leader, then use codebase-explorer, coding-executor, web-researcher, principal-advisor, and reviewer when needed."
+        "desc": "Start from `coding-leader`, then use `codebase-explorer`, `coding-executor`, `web-researcher`, `principal-advisor`, and `reviewer` when needed."
       },
       {
-        "title": "Leader or Executor entry",
-        "desc": "Choose Leader for ownership, support agents, review, and closure; choose Executor for clear, local tasks one agent can finish directly."
+        "title": "Run in OpenCode",
+        "desc": "OpenCode is the first supported host. CrewBee connects Team assets to OpenCode so the built-in Coding Team can run in real repositories."
       },
       {
-        "title": "Review-backed completion",
-        "desc": "Close non-trivial work with diagnostics, build, tests, risk notes, and independent review when needed."
+        "title": "Setup and diagnostics",
+        "desc": "User-level setup, update, and doctor checks reduce installation, upgrade, and troubleshooting friction."
       }
     ]
   },
   "features": {
     "title": "From scattered setup to maintainable Agent Teams.",
-    "subtitle": "CrewBee focuses on the structures that make agent workflows portable and maintainable: Team assets, execution strength, decision context, and context-isolated delegation.",
+    "subtitle": "CrewBee focuses on maintainability: Team assets, domain rules, tools / skills strategy, review flows, and completion criteria are kept together instead of scattered across prompts and projects.",
     "cards": [
       {
-        "title": "Design different Agent Teams for different tasks and projects",
-        "desc": "Different tasks need different roles, rules, workflows, and completion criteria. Do not stretch one growing prompt across every kind of work."
+        "title": "Engineer Agent Teams for domain-specific workflows",
+        "desc": "Not just agents: define tools / skills strategy, workflow, shared rules, review flow, and completion criteria. Turn a repeatable way of working into a reusable Team."
       },
       {
         "title": "Simple stays fast. Complex gets support.",
-        "desc": "CrewBee does not turn multi-agent collaboration into a default ritual. Simple tasks stay single-agent and fast; complex tasks add support agents, review, verification, and completion gates."
+        "desc": "CrewBee does not turn multi-agent work into a default ritual. Simple tasks stay single-agent and fast; complex tasks add support agents, review, validation, and completion criteria."
       },
       {
-        "title": "The main Agent owns the decision context",
-        "desc": "The main Agent keeps user goals, project constraints, support findings, review feedback, verification results, and risks together for final decisions. Support agents can explore, research, and review, but judgment returns to the main Agent."
+        "title": "The Leader owns the decision context",
+        "desc": "The Leader keeps user goals, project constraints, support findings, review feedback, validation results, and risks together for final judgment and delivery."
       },
       {
         "title": "Context-isolated delegation",
-        "desc": "Support agents work in dedicated contexts and return high-signal findings to the main Agent. Do not dump the search process and low-value material back into the main context."
+        "desc": "Support agents work in dedicated contexts for codebase exploration, research, or review, then return findings, evidence, risks, and recommendations to the Leader."
       }
     ]
   },
   "why": {
-    "titleBeforeBreak": "The problem is not more agents.",
-    "titleAfterBreak": "It is missing Team structure.",
+    "titleBeforeBreak": "Complex development work",
+    "titleAfterBreak": "is more than code generation.",
     "paragraphs": [
-      "Prompts get copied into different places. Roles become longer flat lists. Rules drift across projects. Review and completion criteria are hard to maintain.",
-      "Each project slowly grows an implicit workflow. CrewBee turns those hidden workflows into explicit, structured, runnable Agent Teams."
+      "AI can generate code quickly, but reliable delivery still needs requirement understanding, codebase exploration, design judgment, implementation, independent review, validation, and final delivery.",
+      "When these concerns are scattered across prompts, agents, rules, and ad-hoc conventions, agent workflows become difficult to maintain. CrewBee turns these ways of working into maintainable Agent Team assets."
     ],
-    "emphasis": "The value is not more agents. The value is maintainable Team assets.",
+    "emphasis": "CrewBee’s value is reusable Team assets for responsibilities, rules, review flows, and completion criteria.",
     "beforeAfter": {
       "beforeTitle": "Before CrewBee",
       "afterTitle": "After CrewBee",
       "before": [
         "Copy-pasted prompts",
         "Flat agent lists",
-        "Rules scattered per project",
-        "Review depends on memory"
+        "Rules scattered across projects",
+        "Review depends on reminders",
+        "Completion criteria are hard to reuse"
       ],
       "after": [
         "Team assets in files",
-        "Leader and members",
+        "Clear Leader, members, and responsibilities",
         "Shared policy and workflow",
-        "Completion gates and review"
+        "Reusable review flow and completion criteria",
+        "Simple tasks stay light; complex tasks get support"
       ]
     }
   },
   "how": {
     "title": "How CrewBee works",
-    "subtitle": "Define Teams as assets, project them into your host, pick a Leader or Executor, and run the workflow that matches the task.",
+    "subtitle": "Define Teams as assets, connect them to OpenCode, choose a Leader or Executor, and run the workflow that matches the task.",
     "steps": [
       {
         "step": "Define Team",
-        "desc": "Define the Team mission, Leader, members, shared policy, workflow, tool boundaries, review path, and completion criteria."
+        "desc": "Define the Team mission, Leader, members, shared policy, workflow, tools / skills strategy, review path, and completion criteria."
       },
       {
-        "step": "Project into your host",
-        "desc": "CrewBee projects Team definitions into the target Agent Harness as selectable, runnable agents. The current first supported host is OpenCode."
+        "step": "Connect to OpenCode",
+        "desc": "Start with OpenCode today. CrewBee makes Team assets selectable and runnable as agent workflows in OpenCode."
       },
       {
         "step": "Choose Leader or Executor",
-        "desc": "Pick Leader when the task needs ownership, support agents, review, and final closure. Pick Executor when the task is clear enough for direct single-agent execution."
+        "desc": "Pick Leader for complex tasks that need ownership, delegation, review, validation, and final delivery. Pick Executor for clear, local, low-risk tasks."
       },
       {
         "step": "Run the matching workflow",
-        "desc": "Leader and Executor use different execution paths.",
+        "desc": "Simple tasks use the lightweight path; complex tasks add codebase exploration, focused implementation, independent review, validation, and delivery notes.",
         "modes": [
           {
             "label": "Leader",
-            "desc": "Delegates to support agents, gathers findings, and closes with review-backed completion."
+            "desc": "Owns requirement understanding, task thread, support delegation, review synthesis, final judgment, and delivery."
           },
           {
             "label": "Executor",
-            "desc": "Runs directly as a single-agent path without delegation."
+            "desc": "Best for clear, local implementation, fixes, and debugging. It does not own the complex task thread."
           }
         ]
       }
@@ -197,15 +199,15 @@
   },
   "team": {
     "badge": "Team Assets",
-    "title": "Teams are engineering assets. Copy, modify, and contribute them.",
+    "title": "Team packages are engineering assets. Copy, modify, and contribute them.",
     "paragraphs": [
-      "A CrewBee Team is not a prompt file. It is a structured Team package with a mission, Leader, members, shared policy, workflow, review criteria, and human-readable documentation.",
-      "Start with the built-in Coding Team. Copy a template. Adjust roles, shared policy, review flow, and completion criteria. Turn your own agent workflow into a reusable Team."
+      "A CrewBee Team is not a prompt file. It is a structured Team package with mission, Leader, members, shared policy, workflow, tools / skills strategy, review criteria, completion criteria, and human-readable documentation.",
+      "Start with the built-in Coding Team. Copy a template. Adjust roles, shared policy, tools / skills strategy, review flow, and completion criteria. Turn your own way of working into a reusable Team."
     ],
     "files": [
       {
         "name": "team.manifest.yaml",
-        "desc": "Team id, mission, Leader, members, and workflow."
+        "desc": "Team id, mission, Leader, members, workflow, and tools / skills strategy."
       },
       {
         "name": "team.policy.yaml",
@@ -213,7 +215,7 @@
       },
       {
         "name": "coding-leader.agent.md",
-        "desc": "Main agent, owner, decision context, and final closure."
+        "desc": "Main agent, owner, decision context, and final delivery."
       },
       {
         "name": "codebase-explorer.agent.md",
@@ -241,11 +243,11 @@
   "codingTeam": {
     "badge": "Coding Team",
     "title": "Built-in Coding Team. Owner-centered, review-backed.",
-    "subtitle": "CrewBee includes a built-in Coding Team for development, bug fixing, refactoring, debugging, and verification. The Leader owns the task, while support agents handle codebase exploration, implementation, external research, and independent review.",
+    "subtitle": "CrewBee includes a built-in Coding Team for development, bug fixing, refactoring, debugging, and verification. The Leader owns the task thread, while support agents handle codebase exploration, focused implementation, external research, and independent review.",
     "roles": [
       {
         "name": "coding-leader",
-        "desc": "Default entry point, task owner, decision-context holder, and final closure owner."
+        "desc": "Default entry point, task owner, decision-context holder, and final delivery owner."
       },
       {
         "name": "codebase-explorer",
@@ -261,60 +263,60 @@
       },
       {
         "name": "reviewer",
-        "desc": "Independently reviews risk, omissions, verification evidence, and completion criteria."
+        "desc": "Independently reviews risks, omissions, validation evidence, and completion criteria."
       }
     ],
     "gateTitle": "Completion Gate",
     "gates": [
-      "The target problem is located",
+      "Target problem is located",
       "Changes have clear rationale",
-      "Implementation or fix is complete",
-      "Diagnostics / build / tests are run when available",
-      "Independent review is used when risk or scope warrants it",
+      "Required implementation or fix is complete",
+      "Available diagnostics / build / tests have been run",
+      "High-risk or non-trivial work has independent review",
       "Unverified items and residual risks are stated"
     ]
   },
   "firstTask": {
     "badge": "First Task",
     "title": "Your first CrewBee task",
-    "subtitle": "Open a project in OpenCode, select `coding-leader`, and ask CrewBee to fix a real issue with independent review and completion criteria before closure.",
+    "subtitle": "Open a project in OpenCode, select `coding-leader`, and ask CrewBee to complete a real coding task with independent review and completion criteria before final delivery.",
     "steps": [
       "Install CrewBee for OpenCode",
       "Open your project and select `coding-leader`",
-      "Use a real issue to trigger owner, support, review, and completion gates"
+      "Use a real issue to trigger codebase exploration, implementation, review, validation, and delivery"
     ],
-    "prompt": "Use CrewBee Coding Team to fix this issue with review-backed completion. Keep simple tasks lightweight. If the task is non-trivial, locate the relevant code, implement the fix, run available diagnostics/build/tests, and ask reviewer to check risks before final closure.",
+    "prompt": "Use CrewBee Coding Team to fix this issue with review-backed completion. Keep simple tasks lightweight. If the task is non-trivial, locate the relevant code, implement the fix, run available diagnostics / build / tests, and ask reviewer to check risks before final delivery.",
     "quickStartFirst": "Read Quick Start first",
     "promptCardLabel": "Prompt Card"
   },
   "projectContext": {
     "badge": "What’s next",
-    "title": "Next: Project Context and more host adapters.",
-    "subtitle": "After the current Team asset layer, CrewBee will strengthen long-running project context and explore more Agent Harness adapters.",
+    "title": "Next: Project Context, Team templates, and more host adapters.",
+    "subtitle": "After the current Team asset layer, CrewBee will strengthen long-running project context, then explore a Team template ecosystem and more Agent Harness adapters.",
     "cards": [
       {
         "title": "Project Context for long-running work",
-        "desc": "CrewBee will strengthen Project Context so long-running agent work can keep project positioning, framework design, history, current state, known risks, and next actions. Do not make long-running project agents onboard from zero every session."
+        "desc": "Help long-running project agents avoid onboarding from zero every session by preserving project positioning, architecture summary, historical decisions, current state, and next actions."
       },
       {
-        "title": "Restore project state",
-        "desc": "Start a new session with project positioning, architecture summary, historical decisions, current state, and next actions already available."
+        "title": "Team template ecosystem",
+        "desc": "CrewBee can define reusable domain-specific Teams today. Next, CrewBee will gradually collect official templates, community templates, showcase examples, or a registry."
       },
       {
         "title": "Read code heuristically",
-        "desc": "Use Project Context as a heuristic entry point: find relevant modules first, then read targeted code instead of scanning the whole repository from zero."
+        "desc": "Use Project Context as a starting point: identify relevant modules first, then read targeted code instead of scanning the whole repository from zero."
       },
       {
         "title": "More Agent Harness adapters",
-        "desc": "OpenCode is the current first supported host. Future adapters may explore Codex, Claude Code, or other Agent Harnesses."
+        "desc": "OpenCode is the first supported host. Future adapters may explore Codex, Claude Code, or other Agent Harnesses with host-specific projection differences."
       }
     ],
     "flowTitle": "Planned Project Context Loop",
     "flow": [
-      "Session start → Read Project Context to restore project positioning, architecture, and current plan",
-      "During work → Use summaries to guide code reading and decisions",
-      "Session end → Update state, risks, decisions, and next actions",
-      "Next session → Continue from the latest context"
+      "Session start → Read Project Context to restore project positioning, architecture summary, historical decisions, and current plan.",
+      "During work → Use summaries to guide code reading and decisions.",
+      "Session end → Update state, risks, decisions, and next actions.",
+      "Next session → Continue from the latest context."
     ]
   },
   "builders": {
@@ -323,11 +325,11 @@
     "cards": [
       {
         "role": "Agent harness users",
-        "desc": "You use coding agents or agent harnesses, but prompts, agents, and rules are getting scattered and hard to maintain."
+        "desc": "You use coding agents or agent harnesses, but prompts, agents, rules, and review checklists are getting scattered and hard to maintain."
       },
       {
         "role": "OpenCode users today",
-        "desc": "You use OpenCode today and want a structured Team layer with Leaders, members, review, and delegation."
+        "desc": "You use OpenCode today and want a structured Team layer with Leader, members, shared policy, review, and delegation."
       },
       {
         "role": "Prompt / subagent maintainers",
@@ -335,11 +337,11 @@
       },
       {
         "role": "AI coding users",
-        "desc": "You want simple coding tasks to stay lightweight and complex tasks to include exploration, independent review, and completion criteria."
+        "desc": "You want simple coding tasks to stay lightweight and complex tasks to include codebase exploration, independent review, validation, and delivery."
       },
       {
         "role": "DevTools / AI workflow builders",
-        "desc": "You are building AI coding or agent workflow tools and want to study Team definition / projection layers."
+        "desc": "You are building AI coding or agent workflow tools and want to study Agent Team assets, domain-specific Teams, and workflow definitions."
       }
     ]
   },
@@ -352,7 +354,7 @@
     "proofs": [
       "✓ Team / Agent Definitions",
       "✓ Team Library Assembly and Validation",
-      "✓ Runtime Projection",
+      "✓ Team Asset Connection",
       "✓ Formal Leader Default Selection",
       "✓ Agent Config Projection",
       "✓ Session Binding",
@@ -377,7 +379,7 @@
     "items": [
       {
         "q": "Is CrewBee a prompt pack?",
-        "a": "No. CrewBee uses prompts, but its core is Team definitions, Agent profiles, Runtime Projection, session binding, and delegation tooling. It turns agent workflows into maintainable, runnable Team assets."
+        "a": "No. CrewBee uses prompts, but its core is Team definitions, Agent profiles, session binding, delegation tooling, review flows, and completion criteria. It turns agent workflows into maintainable, runnable Team assets."
       },
       {
         "q": "Is CrewBee a flat agent list?",
@@ -389,7 +391,7 @@
       },
       {
         "q": "Does CrewBee make every task multi-agent?",
-        "a": "No. CrewBee is about choosing the right execution strength. Simple tasks can stay fast with a single agent; complex tasks can bring in support agents, review, verification, and completion gates."
+        "a": "No. CrewBee does not turn multi-agent work into a default ritual. Simple tasks stay lightweight; complex tasks add codebase exploration, focused implementation, independent review, validation, and delivery."
       },
       {
         "q": "Why does the main agent / Leader matter?",
@@ -405,11 +407,11 @@
       },
       {
         "q": "Is Project Context fully implemented today?",
-        "a": "Project Context is a roadmap direction, not a fully mature current capability. The goal is to maintain high-signal project summaries across sessions and reduce repeated explanation and repeated code reading."
+        "a": "No. Project Context is a Roadmap / Next-stage direction. The goal is to help long-running project agents avoid onboarding from zero every session, not to claim a mature current capability."
       },
       {
         "q": "Which host is supported today?",
-        "a": "Today, CrewBee supports OpenCode first. More host adapters are roadmap work."
+        "a": "CrewBee starts with OpenCode today. More Agent Harness adapters belong to the Roadmap."
       },
       {
         "q": "Can CrewBee support non-coding Teams?",
@@ -426,7 +428,7 @@
     "title": "Ready to turn scattered agents into real teams?",
     "paragraphs": [
       "Read the Quick Start, view the current OpenCode integration, or join Discussions to share your first Team.",
-      "CrewBee is an Agent Team asset layer, with OpenCode as the current first supported host. Simple stays fast; complex gets support."
+      "CrewBee is an Agent Team asset layer: build reusable Teams for domain-specific workflows, starting with the built-in Coding Team in OpenCode."
     ],
     "ctas": {
       "github": "View GitHub",
