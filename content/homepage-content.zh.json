@@ -143,9 +143,9 @@
     "titleAfterBreak": "需要可审查、可验证的工作结构。",
     "paragraphs": [
       "代码生成只是其中一环。真正影响交付质量的，是需求理解、代码定位、方案判断、实现变更、独立审查、验证确认和交付说明。",
-      "如果这些内容分散在 prompts、agents、rules 和临时约定中，Agent 工作流会越来越难维护。CrewBee 把这些工作方式整理成可维护的 Agent Team 资产。"
+      "如果这些内容分散在 prompts、agents、rules 和临时约定中，Agent 的工作方式会越来越难维护。CrewBee 把这些工作方式整理成可维护的 Agent Team 资产。"
     ],
-    "emphasis": "价值不是更多 Agent，而是把复杂研发任务需要的职责、规则、review 和验收标准整理成可复用的 Team 资产。",
+    "emphasis": "价值不是更多 Agent，而是把复杂研发任务需要的职责、规则、工作流、review 和验收标准整理成可复用的 Team 资产。",
     "beforeAfter": {
       "beforeTitle": "使用 CrewBee 之前",
       "afterTitle": "使用 CrewBee 之后",
