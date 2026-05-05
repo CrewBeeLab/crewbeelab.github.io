@@ -140,12 +140,12 @@
   },
   "why": {
     "titleBeforeBreak": "Complex engineering tasks",
-    "titleAfterBreak": "need a reviewable, verifiable workflow.",
+    "titleAfterBreak": "need a reviewable, verifiable work structure.",
     "paragraphs": [
-      "Code generation is only one part. Reliable software delivery still needs requirements understanding, codebase exploration, implementation planning, focused changes, independent review, validation, and delivery notes.",
-      "When these responsibilities are scattered across prompts, agents, rules, and ad-hoc conventions, agent workflows become difficult to maintain. CrewBee turns them into reusable Agent Team assets."
+      "Code generation is only one part. Reliable software delivery also needs requirements understanding, codebase exploration, implementation planning, focused changes, independent review, validation, and delivery notes.",
+      "When these responsibilities are scattered across prompts, agents, rules, and ad-hoc conventions, agent work becomes difficult to maintain. CrewBee turns them into reusable Agent Team assets."
     ],
-    "emphasis": "CrewBee’s value is not more agents by default. It is reusable Team assets for responsibilities, rules, reviews, and completion criteria.",
+    "emphasis": "CrewBee’s value is not more agents by default. It is reusable Team assets for responsibilities, rules, reviews, workflows, and completion criteria.",
     "beforeAfter": {
       "beforeTitle": "Before CrewBee",
       "afterTitle": "After CrewBee",
