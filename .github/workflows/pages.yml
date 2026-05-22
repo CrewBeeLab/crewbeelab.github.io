@@ -100,10 +100,15 @@ jobs:
 
       - name: Configure Alibaba Cloud CLI
         env:
-          ALIYUN_ACCESS_KEY_ID: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
-          ALIYUN_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+          ALIYUN_ACCESS_KEY_ID: ${{ secrets.ALIYUN_ACCESS_KEY_ID || secrets.ALIYUN_OSS_ACCESS_KEY_ID }}
+          ALIYUN_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET || secrets.ALIYUN_OSS_ACCESS_KEY_SECRET }}
         run: |
           set -euo pipefail
+
+          if [ -z "${ALIYUN_ACCESS_KEY_ID}" ] || [ -z "${ALIYUN_ACCESS_KEY_SECRET}" ]; then
+            echo "Missing Alibaba Cloud CLI credentials. Set ALIYUN_ACCESS_KEY_ID / ALIYUN_ACCESS_KEY_SECRET or reuse ALIYUN_OSS_ACCESS_KEY_ID / ALIYUN_OSS_ACCESS_KEY_SECRET."
+            exit 1
+          fi
 
           aliyun configure set \
             --profile default \
