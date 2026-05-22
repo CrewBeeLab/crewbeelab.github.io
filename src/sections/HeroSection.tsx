@@ -39,10 +39,10 @@ export const HeroSection = ({ content }: LocalizedSectionProps) => (
           <div className="absolute inset-8 rounded-full border border-honey/15" />
           <div className="absolute inset-14 rounded-full border border-ink/8" />
           <BeeIcon alt={content.nav.brand} className="w-40 h-40 md:w-56 md:h-56 text-ink relative z-20" />
-          <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 4, repeat: Infinity }} className="absolute -top-4 sm:top-10 -left-4 sm:left-0 bg-paper/82 backdrop-blur-md border border-honey/15 p-2 sm:p-3 shadow-xl z-30 min-w-36 text-center">
+          <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 4, repeat: Infinity }} className="absolute -top-4 sm:top-10 -left-4 sm:left-0 bg-paper/82 backdrop-blur-md border border-honey/15 p-2 sm:p-3 shadow-xl z-30 min-w-36 text-center hidden sm:block">
             <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-[0.2em] whitespace-nowrap">{content.hero.floating[0]}</span>
           </motion.div>
-          <motion.div animate={{ y: [5, -5, 5] }} transition={{ duration: 5, repeat: Infinity }} className="absolute bottom-4 sm:bottom-10 -right-8 sm:-right-4 bg-paper/82 backdrop-blur-md border border-honey/15 p-2 sm:p-3 shadow-xl z-30 min-w-36 text-center">
+          <motion.div animate={{ y: [5, -5, 5] }} transition={{ duration: 5, repeat: Infinity }} className="absolute bottom-4 sm:bottom-10 -right-8 sm:-right-4 bg-paper/82 backdrop-blur-md border border-honey/15 p-2 sm:p-3 shadow-xl z-30 min-w-36 text-center hidden sm:block">
             <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-[0.2em] text-honey whitespace-nowrap">{content.hero.floating[1]}</span>
           </motion.div>
           <motion.div animate={{ y: [-3, 3, -3] }} transition={{ duration: 6, repeat: Infinity }} className="absolute top-1/2 -left-10 sm:-left-8 bg-paper/82 backdrop-blur-md border border-honey/15 p-2 sm:p-3 shadow-xl z-30 hidden sm:block min-w-44 text-center">

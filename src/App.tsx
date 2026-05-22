@@ -69,7 +69,7 @@ export default function App() {
         <NotImplementedPage content={content} page={pendingPage} />
       ) : (
       <main>
-        <div className="min-h-[calc(100svh-28px)] flex flex-col">
+        <div className="min-h-[calc(100svh-28px)] flex flex-col pb-24 sm:pb-0">
           <HeroSection content={content} />
           <StatusBar content={content} />
         </div>
