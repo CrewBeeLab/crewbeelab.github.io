@@ -453,8 +453,8 @@
     }
   },
   "footer": {
-    "brand": "CrewBeeLab © 2026",
-    "github": "GitHub",
-    "docs": "文档"
+    "version": "CrewBee v2.2.2",
+    "icp": "沪ICP备2025155800号-5",
+    "systemStatus": "System Ready"
   }
 }

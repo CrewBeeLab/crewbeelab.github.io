@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { homepageContent, type HomepageContent } from './i18n/homepageContent';
 import { useLanguage } from './hooks/useLanguage';
 import { useLocalizedHead } from './hooks/useLocalizedHead';
-import { Footer } from './layout/Footer';
+import { WorkbenchStatusBar } from './layout/WorkbenchStatusBar';
 import { Navbar } from './layout/Navbar';
 import {
   Acknowledgements,
@@ -58,7 +58,7 @@ export default function App() {
   }, []);
 
   return (
-    <div id="top" className="relative font-sans text-ink selection:bg-honey/30">
+    <div id="top" className="relative font-sans text-ink selection:bg-honey/30 pb-6">
       <div className="fixed inset-0 bg-paper -z-10" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,155,43,0.10),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.45),transparent_42%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(242,170,42,0.16),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_42%)] opacity-[var(--theme-glow-opacity)] transition-opacity duration-500 -z-10 pointer-events-none" />
       <div className="bg-grain" />
@@ -90,7 +90,7 @@ export default function App() {
       </main>
       )}
 
-      <Footer content={content} />
+      <WorkbenchStatusBar content={content} />
     </div>
   );
 }
