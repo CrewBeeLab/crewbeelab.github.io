@@ -50,6 +50,7 @@ ossutil sync "$DIST_DIR/" "oss://$TARGET_BUCKET/" \
 if [[ -d "$DIST_DIR/assets" ]]; then
   ossutil set-props "oss://$TARGET_BUCKET/assets/" \
     --cache-control "public, max-age=604800, immutable" \
+    --metadata-directive update \
     -r \
     -f
 fi
@@ -58,6 +59,7 @@ fi
 ossutil set-props "oss://$TARGET_BUCKET/" \
   --include "*.html" \
   --cache-control "public, max-age=600" \
+  --metadata-directive update \
   -r \
   -f
 
