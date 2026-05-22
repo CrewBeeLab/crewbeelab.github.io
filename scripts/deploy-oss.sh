@@ -39,20 +39,25 @@ ossutil version || ossutil help >/dev/null
 
 echo "Deploying $DIST_DIR to oss://$TARGET_BUCKET/ via $TARGET_ENDPOINT ($TARGET_REGION)"
 
-# Mirror the built static site. Static assets can use long cache; HTML is
-# overridden below with a short cache policy for CDN refresh friendliness.
+# Mirror the built static site first. Object metadata is set in separate
+# set-props calls below to avoid sync metadata flag compatibility issues.
 ossutil sync "$DIST_DIR/" "oss://$TARGET_BUCKET/" \
   --delete \
   --force \
-  --cache-control "public, max-age=604800, immutable" \
-  --metadata-directive REPLACE \
   --no-progress
+
+# Static assets are content-hashed by Vite and can use long cache.
+if [[ -d "$DIST_DIR/assets" ]]; then
+  ossutil set-props "oss://$TARGET_BUCKET/assets/" \
+    --cache-control "public, max-age=604800, immutable" \
+    -r \
+    -f
+fi
 
 # HTML entry pages should stay easy to refresh behind CDN.
 ossutil set-props "oss://$TARGET_BUCKET/" \
   --include "*.html" \
   --cache-control "public, max-age=600" \
-  --metadata-directive REPLACE \
   -r \
   -f
 
