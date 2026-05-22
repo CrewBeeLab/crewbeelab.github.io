@@ -70,8 +70,10 @@ ossutil set-props "oss://$TARGET_BUCKET/" \
 export OSS_ACCESS_KEY_ID="$CONTROL_ACCESS_KEY_ID"
 export OSS_ACCESS_KEY_SECRET="$CONTROL_ACCESS_KEY_SECRET"
 
-ossutil api put-bucket-website \
+if ! ossutil api put-bucket-website \
   --bucket "$TARGET_BUCKET" \
-  --website-configuration '{"IndexDocument":{"Suffix":"index.html","SupportSubDir":"true","Type":"0"},"ErrorDocument":{"Key":"index.html","HttpStatus":"404"}}'
+  --website-configuration '{"IndexDocument":{"Suffix":"index.html","SupportSubDir":"true","Type":"0"},"ErrorDocument":{"Key":"index.html","HttpStatus":"404"}}'; then
+  echo "::warning::Failed to configure OSS static website hosting. Grant oss:PutBucketWebsite to the CI access key or configure index.html as the bucket static website index manually."
+fi
 
 echo "OSS deploy completed: oss://$TARGET_BUCKET/"
