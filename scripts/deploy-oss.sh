@@ -45,12 +45,14 @@ ossutil sync "$DIST_DIR/" "oss://$TARGET_BUCKET/" \
   --delete \
   --force \
   --cache-control "public, max-age=604800, immutable" \
+  --metadata-directive REPLACE \
   --no-progress
 
 # HTML entry pages should stay easy to refresh behind CDN.
 ossutil set-props "oss://$TARGET_BUCKET/" \
   --include "*.html" \
   --cache-control "public, max-age=600" \
+  --metadata-directive REPLACE \
   -r \
   -f
 
