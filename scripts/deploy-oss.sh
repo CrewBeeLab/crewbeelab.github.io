@@ -7,6 +7,8 @@ TARGET_REGION="${ALIYUN_OSS_REGION:-${OSS_REGION:-cn-beijing}}"
 TARGET_ENDPOINT="${ALIYUN_OSS_ENDPOINT:-${OSS_ENDPOINT:-https://oss-cn-beijing.aliyuncs.com}}"
 TARGET_ACCESS_KEY_ID="${ALIYUN_OSS_ACCESS_KEY_ID:-${OSS_ACCESS_KEY_ID:-}}"
 TARGET_ACCESS_KEY_SECRET="${ALIYUN_OSS_ACCESS_KEY_SECRET:-${OSS_ACCESS_KEY_SECRET:-}}"
+CONTROL_ACCESS_KEY_ID="${ALIYUN_ACCESS_KEY_ID:-$TARGET_ACCESS_KEY_ID}"
+CONTROL_ACCESS_KEY_SECRET="${ALIYUN_ACCESS_KEY_SECRET:-$TARGET_ACCESS_KEY_SECRET}"
 OSSUTIL_VERSION="${OSSUTIL_VERSION:-2.2.1}"
 
 if [[ ! -d "$DIST_DIR" ]]; then
@@ -65,6 +67,9 @@ ossutil set-props "oss://$TARGET_BUCKET/" \
 
 # Configure OSS static website hosting so the bucket serves index.html for
 # root and directory requests such as /, /en/, and /zh/.
+export OSS_ACCESS_KEY_ID="$CONTROL_ACCESS_KEY_ID"
+export OSS_ACCESS_KEY_SECRET="$CONTROL_ACCESS_KEY_SECRET"
+
 ossutil api put-bucket-website \
   --bucket "$TARGET_BUCKET" \
   --website-configuration '{"IndexDocument":{"Suffix":"index.html","SupportSubDir":"true","Type":"0"},"ErrorDocument":{"Key":"index.html","HttpStatus":"404"}}'
