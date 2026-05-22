@@ -119,7 +119,7 @@ jobs:
 
       - name: Refresh CDN cache
         env:
-          ALIYUN_CDN_DOMAIN: ${{ vars.ALIYUN_CDN_DOMAIN || secrets.ALIYUN_CDN_DOMAIN }}
+          ALIYUN_CDN_DOMAIN: ${{ vars.ALIYUN_CDN_DOMAIN || secrets.ALIYUN_CDN_DOMAIN || 'https://www.crewbee.art' }}
         run: |
           set -euo pipefail
 
