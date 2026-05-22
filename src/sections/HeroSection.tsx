@@ -5,33 +5,35 @@ import { DEMO_URL, GET_STARTED_URL, GITHUB_URL } from '../config/site';
 import type { LocalizedSectionProps } from './types';
 
 export const HeroSection = ({ content }: LocalizedSectionProps) => (
-  <section className="relative flex flex-1 items-center overflow-hidden w-full max-w-[1400px] mx-auto px-6 md:px-16 pt-24 pb-10 md:pt-32 md:pb-10 lg:pt-28 lg:pb-8">
+  <section className="relative flex flex-1 items-center overflow-hidden w-full max-w-[1400px] mx-auto px-6 md:px-16 pt-24 pb-14 md:pt-32 md:pb-10 lg:pt-28 lg:pb-8">
     <div className="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] rounded-full opacity-[0.05] pointer-events-none" style={{ background: 'radial-gradient(circle, var(--theme-honey) 0%, transparent 70%)' }} />
 
-    <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-center w-full">
-      <motion.div className="md:col-span-12 lg:col-span-7" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+    <div className="flex flex-col md:grid md:grid-cols-12 gap-8 md:gap-12 items-center w-full">
+      <motion.div className="order-2 md:order-none md:col-span-12 lg:col-span-7 flex flex-col items-center md:items-start text-center md:text-left" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.35rem] xl:text-7xl mb-5 md:mb-6 font-serif tracking-tight leading-[1.08] md:leading-[1.04] max-w-4xl">
           {content.hero.titlePrefix} <span className="italic text-honey">{content.hero.titleHighlight}</span>
         </h1>
         <p className="text-lg sm:text-xl md:text-[1.35rem] opacity-70 mb-4 max-w-2xl leading-[1.68] font-serif">{content.hero.description}</p>
-        <p className="text-base md:text-lg opacity-65 mb-6 md:mb-7 max-w-2xl leading-[1.7] font-serif">{content.hero.supporting}</p>
+        <p className="hidden md:block text-base md:text-lg opacity-65 mb-6 md:mb-7 max-w-2xl leading-[1.7] font-serif">{content.hero.supporting}</p>
 
-        <div className="space-y-3 mb-9 md:mb-8 font-sans text-xs md:text-sm tracking-wide opacity-80 max-w-2xl">
+        <div className="hidden md:block space-y-3 mb-9 md:mb-8 font-sans text-xs md:text-sm tracking-wide opacity-80 max-w-2xl">
           {content.hero.boundaries.map((item) => (
             <div key={item} className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-honey shrink-0" /> {item}</div>
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-5">
-          <a href={GET_STARTED_URL} className="btn-primary text-center sm:min-w-44">{content.hero.readQuickStart}</a>
-          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="btn-secondary flex items-center justify-center gap-2 sm:min-w-48">
-            <Github className="w-4 h-4" /> {content.hero.viewGithub}
-          </a>
-          <a href={DEMO_URL} className="btn-secondary text-center sm:min-w-44">{content.hero.watchDemo}</a>
+        <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3.5 sm:gap-5 w-full md:w-auto mt-6 md:mt-0">
+          <a href={GET_STARTED_URL} className="btn-primary text-center w-full sm:w-auto sm:min-w-44">{content.hero.readQuickStart}</a>
+          <div className="flex w-full sm:w-auto gap-3.5 sm:gap-5">
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="btn-secondary flex items-center justify-center gap-2 flex-1 sm:flex-none sm:min-w-48">
+              <Github className="w-4 h-4" /> {content.hero.viewGithub}
+            </a>
+            <a href={DEMO_URL} className="hidden sm:flex btn-secondary text-center sm:min-w-44 items-center justify-center">{content.hero.watchDemo}</a>
+          </div>
         </div>
       </motion.div>
 
-      <motion.div className="md:col-span-12 lg:col-span-5 relative flex items-center justify-center p-8 md:p-12 mb-10 md:mb-0" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
+      <motion.div className="order-1 md:order-none md:col-span-12 lg:col-span-5 relative flex items-center justify-center p-4 md:p-12 mb-2 md:mb-0 scale-[0.8] sm:scale-90 md:scale-100 origin-center" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
         <div className="relative w-full aspect-square max-w-[280px] sm:max-w-md flex items-center justify-center">
           <div className="absolute inset-0 bg-honey/10 blur-[60px] md:blur-[80px] rounded-full" />
           <div className="absolute inset-8 rounded-full border border-honey/15" />
