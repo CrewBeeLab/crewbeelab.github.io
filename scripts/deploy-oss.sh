@@ -63,4 +63,10 @@ ossutil set-props "oss://$TARGET_BUCKET/" \
   -r \
   -f
 
+# Configure OSS static website hosting so the bucket serves index.html for
+# root and directory requests such as /, /en/, and /zh/.
+ossutil api put-bucket-website \
+  --bucket "$TARGET_BUCKET" \
+  --website-configuration '{"IndexDocument":{"Suffix":"index.html","SupportSubDir":"true","Type":"0"},"ErrorDocument":{"Key":"index.html","HttpStatus":"404"}}'
+
 echo "OSS deploy completed: oss://$TARGET_BUCKET/"
