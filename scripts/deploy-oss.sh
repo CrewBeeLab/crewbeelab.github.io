@@ -35,7 +35,7 @@ if ! command -v ossutil >/dev/null 2>&1; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
 
-ossutil --version
+ossutil version || ossutil help >/dev/null
 
 echo "Deploying $DIST_DIR to oss://$TARGET_BUCKET/ via $TARGET_ENDPOINT ($TARGET_REGION)"
 
